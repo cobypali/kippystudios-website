@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicons/favicon_v01.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kippy Studios | Coby Palivathukal</title>
+    <meta name="description" content="Kippy Studios - creative projects and portfolio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="https://unpkg.com/three@0.160.0/build/three.module.js" as="script" crossorigin>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+/* Main Content */
+        main {
+            flex: 1;
+            padding: 120px 50px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .page-header h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+            color: #E6EDF7;
+            margin-bottom: 20px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Projects Grid */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .project-card {
+            background: #121A2B;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #1A2438;
+            transition: border-color 0.3s;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .project-card:hover {
+            border-color: #3B82F6;
+        }
+
+        .project-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+
+        .project-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .project-info {
+            padding: 24px;
+        }
+
+        .project-info h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #60A5FA;
+            margin-bottom: 12px;
+        }
+
+        .project-info p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(230, 237, 247, 0.85);
+        }
+.social-icon-container {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+/* Mobile Responsive */
+        @media (max-width: 768px) {main {
+                padding: 100px 20px 60px;
+            }
+
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .page-header p {
+                font-size: 16px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }.social-icon-container {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="logo">COBYPAL</a>
+        <div class="nav-links">
+            <a>About</a>
+            <a class="active">Kippy Studios</a>
+            <a>Coby's Brain</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <h1>Kippy Studios</h1>
+            <p>Founded in 2022 with the goal of telling unique stories using innovative technologies. Check out some of our animated projects below.</p>
+        </div>
+
+        <div class="projects">
+            <div class="project-card">
+                <div class="project-video">
+                    <iframe src="https://www.youtube.com/embed/u429Jm5RdoU" title="The Fridge" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>The Fridge</h3>
+                    <p>An existential web series that follows various food items as they seek to cope with suffering, mortality, and the challenging search for meaning.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-video">
+                    <iframe src="https://www.youtube.com/embed/SQJE7rkXqWk" title="Ron Roach" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Ron Roach</h3>
+                    <p>A short film about a young cockroach with a passion for dancing in a world where dancing has been deemed illegal. Rendered in real-time with Unity.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-video">
+                    <iframe src="https://www.youtube.com/embed/gL-tFc7fUgk" title="Paper Penguin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="project-info">
+                    <h3>Paper Penguin</h3>
+                    <p>The story of a penguin rapper attempting to speak out against climate change. Created using Unreal Engine and motion capture.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links-3d" id="social-links-3d">
+            <div class="social-icon-container" data-link="https://www.youtube.com/user/cobypalivathukal" data-model="socials/YouTube.glb" title="YouTube"></div>
+            <div class="social-icon-container" data-link="https://www.instagram.com/cobypal" data-model="socials/IG.glb" title="Instagram"></div>
+            <div class="social-icon-container" data-link="https://www.tiktok.com/@cobypal?lang=en" data-model="socials/TikTok.glb" title="TikTok"></div>
+            <div class="social-icon-container" data-link="https://www.twitter.com/cobypal" data-model="socials/X.glb" title="X"></div>
+            <div class="social-icon-container" data-link="http://threads.net/@cobypal" data-model="socials/Threads.glb" title="Threads"></div>
+            <div class="social-icon-container" data-link="https://www.linkedin.com/in/cobypalivathukal/" data-model="socials/LinkedIn.glb" title="LinkedIn"></div>
+            <div class="social-icon-container" data-link="https://www.facebook.com/coby.palivathukal" data-model="socials/Facebook.glb" title="Facebook"></div>
+        </div>
+        <p class="copyright">&copy; 2026 Coby Palivathukal. All rights reserved.</p>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import { initSocialIcons } from './social-icons.js';
+        initSocialIcons();
+    </script>
+</body>
+</html>
