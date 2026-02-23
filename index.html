@@ -18,9 +18,8 @@
         }
 /* Main Content */
         main {
-            flex: 1;
-            padding: 60px 50px 80px;
-            max-width: 1000px;
+            padding: 40px 50px 48px;
+            max-width: 1180px;
             margin: 0 auto;
             width: 100%;
         }
@@ -29,18 +28,18 @@
             background: #121A2B;
             border-radius: 16px;
             border: 1px solid #1A2438;
-            max-width: 900px;
+            max-width: 1080px;
             margin: 0 auto;
             width: 100%;
-            padding: 28px;
+            padding: 36px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 30px;
         }
 
         .brand-header-image {
             width: 100%;
-            max-width: 760px;
+            max-width: 880px;
             margin: 0 auto;
             display: block;
             height: auto;
@@ -48,14 +47,14 @@
 
         .brand-content {
             display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 20px;
+            grid-template-columns: 160px 1fr;
+            gap: 28px;
             align-items: start;
         }
 
         .brand-icon {
             width: 100%;
-            max-width: 120px;
+            max-width: 160px;
             height: auto;
             border-radius: 18px;
             border: 1px solid #1A2438;
@@ -65,17 +64,17 @@
 
         .brand-copy h1 {
             font-family: 'Inter', sans-serif;
-            font-size: 34px;
+            font-size: 40px;
             font-weight: 700;
             color: #E6EDF7;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .brand-copy p {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.75;
             color: rgba(230, 237, 247, 0.9);
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .brand-copy p:last-child {
@@ -87,6 +86,12 @@
             font-weight: 700;
         }
 
+        .brand-copy a {
+            color: #93C5FD;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         .social-icon-container {
             width: 100px;
             height: 100px;
@@ -95,7 +100,7 @@
         }
 /* Mobile Responsive */
         @media (max-width: 768px) {main {
-                padding: 40px 20px 60px;
+                padding: 24px 20px 40px;
             }
 
             .brand-hero {
@@ -130,13 +135,14 @@
 <body>
     <main>
         <section class="brand-hero" aria-labelledby="kippy-studios-heading">
-            <img class="brand-header-image" src="Header.png" alt="Kippy Studios header logo">
+            <img class="brand-header-image" src="Header_v02.png" alt="Kippy Studios header logo">
             <div class="brand-content">
                 <img class="brand-icon" src="Icon.png" alt="Kippy Studios icon">
                 <div class="brand-copy">
                     <h1 id="kippy-studios-heading">Kippy Studios</h1>
                     <p><strong>Kippy Studios is the leader in agentic content production.</strong> We build and produce next-generation content systems that combine storytelling, automation, and intelligent creative workflows.</p>
                     <p>Our studio focuses on high-leverage content pipelines, original brand experiences, and scalable creative execution across platforms.</p>
+                    <p>For collaborations, partnerships, and inquiries, email <a href="mailto:kippystudios@gmail.com">kippystudios@gmail.com</a>.</p>
                     <p>Connect with Kippy Studios through the social channels below.</p>
                 </div>
             </div>
