@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects – Kippy Studios</title>
+    <meta name="description" content="Projects from Kippy Studios.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            padding: 100px 50px 48px;
+            max-width: 1180px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #E6EDF7;
+            margin-bottom: 32px;
+            max-width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #121A2B;
+            border-radius: 16px;
+            border: 1px solid #1A2438;
+            padding: 36px;
+        }
+
+        .project-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .project-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .project-card h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #E6EDF7;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(230, 237, 247, 0.85);
+        }
+
+        .project-poster {
+            width: 100%;
+            max-width: 360px;
+            margin-bottom: 24px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .project-poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 80px 20px 40px;
+            }
+
+            .page-title {
+                font-size: 26px;
+                margin-bottom: 24px;
+            }
+
+            .project-card {
+                padding: 24px 20px;
+            }
+
+            .project-card h2 {
+                font-size: 18px;
+            }
+
+            .project-card p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">KIPPY STUDIOS</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+        </div>
+    </nav>
+
+    <main>
+        <p class="page-title">Past Projects</p>
+        <div class="projects">
+
+            <div class="project-card">
+                <div class="project-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/u429Jm5RdoU?list=PLAslz-0snME14_KOQZxVOA84V61mPzj64"
+                        title="The Fridge"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h2>The Fridge</h2>
+                <p>An existential web series that follows various food items as they seek to cope with suffering, mortality, and the challenging search for meaning.</p>
+            </div>
+
+        </div>
+
+        <p class="page-title" style="margin-top: 56px;">Upcoming Projects</p>
+        <div class="projects">
+
+            <div class="project-card">
+                <div class="project-poster">
+                    <img src="the-bathroom-coming-soon.jpg" alt="The Bathroom – Coming Soon">
+                </div>
+                <h2>The Bathroom</h2>
+            </div>
+
+            <div class="project-card">
+                <div class="project-poster">
+                    <img src="love-pantry-coming-soon.png" alt="Love Pantry – Coming Soon">
+                </div>
+                <h2>Love Pantry</h2>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links-3d" id="social-links-3d">
+            <div class="social-icon-container" data-link="https://www.youtube.com/@KippyStudios/shorts" data-model="socials/YouTube.glb" title="YouTube"></div>
+            <div class="social-icon-container" data-link="https://www.instagram.com/kippystudios/" data-model="socials/IG.glb" title="Instagram"></div>
+            <div class="social-icon-container" data-link="https://www.tiktok.com/@kippystudios?lang=en" data-model="socials/TikTok.glb" title="TikTok"></div>
+            <div class="social-icon-container" data-link="https://x.com/kippystudios" data-model="socials/X.glb" title="X"></div>
+            <div class="social-icon-container" data-link="https://www.threads.com/@kippystudios" data-model="socials/Threads.glb" title="Threads"></div>
+            <div class="social-icon-container" data-link="https://www.linkedin.com/company/kippystudios/?viewAsMember=true" data-model="socials/LinkedIn.glb" title="LinkedIn"></div>
+            <div class="social-icon-container" data-link="https://www.facebook.com/kippystudios" data-model="socials/Facebook.glb" title="Facebook"></div>
+        </div>
+        <p class="copyright">&copy; 2026 Kippy Studios. All rights reserved.</p>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import { initSocialIcons } from './social-icons.js';
+        initSocialIcons();
+    </script>
+</body>
+</html>

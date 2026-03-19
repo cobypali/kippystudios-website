@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="Icon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kippy Studios</title>
     <meta name="description" content="Kippy Studios is the leader in agentic content production.">
@@ -18,7 +18,7 @@
         }
 /* Main Content */
         main {
-            padding: 40px 50px 48px;
+            padding: 100px 50px 48px;
             max-width: 1180px;
             margin: 0 auto;
             width: 100%;
@@ -42,14 +42,13 @@
             max-width: 880px;
             margin: 0 auto;
             display: block;
-            height: auto;
+            height: 480px;
+            object-fit: cover;
+            object-position: center;
         }
 
         .brand-content {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 28px;
-            align-items: start;
+            display: block;
         }
 
         .brand-icon {
@@ -100,7 +99,7 @@
         }
 /* Mobile Responsive */
         @media (max-width: 768px) {main {
-                padding: 24px 20px 40px;
+                padding: 80px 20px 40px;
             }
 
             .brand-hero {
@@ -133,13 +132,20 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="logo">KIPPY STUDIOS</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+        </div>
+    </nav>
+
     <main>
         <section class="brand-hero" aria-labelledby="kippy-studios-heading">
-            <img class="brand-header-image" src="Header_v02.png" alt="Kippy Studios header logo">
+            <img class="brand-header-image" src="Header_v03.png" alt="Kippy Studios header logo">
             <div class="brand-content">
-                <img class="brand-icon" src="Icon.png" alt="Kippy Studios icon">
                 <div class="brand-copy">
-                    <h1 id="kippy-studios-heading">Kippy Studios</h1>
                     <p><strong>Kippy Studios is the leader in agentic content production.</strong> We build and produce next-generation content systems that combine storytelling, automation, and intelligent creative workflows.</p>
                     <p>Our studio focuses on high-leverage content pipelines, original brand experiences, and scalable creative execution across platforms.</p>
                     <p>For collaborations, partnerships, and inquiries, email <a href="mailto:kippystudios@gmail.com">kippystudios@gmail.com</a>.</p>
