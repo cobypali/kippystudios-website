@@ -14,10 +14,9 @@ export function initSocialIcons() {
   const iconContainers = document.querySelectorAll('.social-icon-container');
   if (iconContainers.length === 0) return;
 
-  // Find the footer element that wraps all icons
+  // Find the footer element that wraps the site-wide icon row
   const footer = iconContainers[0].closest('footer') ||
                  document.getElementById('social-links-3d');
-  if (!footer) return;
 
   // ---------------------------------------------------------------------------
   // Shared offscreen WebGL renderer (single context for all icons)
@@ -244,22 +243,29 @@ export function initSocialIcons() {
   }
 
   // ---------------------------------------------------------------------------
-  // Intersection Observer -- only run while footer is visible
+  // Intersection Observer -- only run while the footer is visible
   // ---------------------------------------------------------------------------
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          startAnimating();
-        } else {
-          stopAnimating();
-        }
-      });
-    },
-    { threshold: 0 }
-  );
+  const hasNonFooterIcons = icons.some((icon) => !icon.container.closest('footer'));
+  let observer = null;
 
-  observer.observe(footer);
+  if (hasNonFooterIcons || !footer) {
+    startAnimating();
+  } else {
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startAnimating();
+          } else {
+            stopAnimating();
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(footer);
+  }
 
   // ---------------------------------------------------------------------------
   // Public cleanup (optional -- call if you ever tear down the page)
@@ -267,7 +273,9 @@ export function initSocialIcons() {
   return {
     dispose() {
       stopAnimating();
-      observer.disconnect();
+      if (observer) {
+        observer.disconnect();
+      }
 
       // Remove window-level event listeners
       icons.forEach((icon) => {

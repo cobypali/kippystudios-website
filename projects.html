@@ -78,6 +78,18 @@
             color: rgba(230, 237, 247, 0.85);
         }
 
+        .project-social-links {
+            display: flex;
+            gap: 18px;
+            margin-top: 22px;
+            flex-wrap: wrap;
+        }
+
+        .project-social-links .social-icon-container {
+            width: 72px;
+            height: 72px;
+        }
+
         .project-poster {
             width: 100%;
             max-width: 360px;
@@ -113,6 +125,15 @@
             .project-card p {
                 font-size: 15px;
             }
+
+            .project-social-links {
+                gap: 12px;
+            }
+
+            .project-social-links .social-icon-container {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
@@ -127,7 +148,7 @@
     </nav>
 
     <main>
-        <p class="page-title">Past Projects</p>
+        <p class="page-title">Projects</p>
         <div class="projects">
 
             <div class="project-card">
@@ -141,6 +162,24 @@
                 </div>
                 <h2>The Fridge</h2>
                 <p>An existential web series that follows various food items as they seek to cope with suffering, mortality, and the challenging search for meaning.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/IPHTZ-RsJLY"
+                        title="Great Goats"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h2>Great Goats</h2>
+                <p>An AI-generated web series documenting the lives of goat versions of very important people throughout history.</p>
+                <div class="project-social-links">
+                    <div class="social-icon-container" data-link="https://www.youtube.com/@KippyStudios/shorts" data-model="socials/YouTube.glb" title="YouTube"></div>
+                    <div class="social-icon-container" data-link="https://www.instagram.com/greatgoatsofficial/" data-model="socials/IG.glb" title="Instagram"></div>
+                    <div class="social-icon-container" data-link="https://www.tiktok.com/@greatgoatsofficial?lang=en" data-model="socials/TikTok.glb" title="TikTok"></div>
+                </div>
             </div>
 
         </div>
