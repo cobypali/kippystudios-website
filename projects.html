@@ -34,10 +34,10 @@
             margin-right: auto;
         }
 
-        .projects {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             max-width: 1080px;
             margin: 0 auto;
         }
@@ -46,69 +46,65 @@
             background: #121A2B;
             border-radius: 16px;
             border: 1px solid #1A2438;
-            padding: 36px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
-        .project-card > h2 {
-            margin-bottom: 20px;
-        }
-
-        .project-video {
+        .project-media {
             width: 100%;
             aspect-ratio: 16 / 9;
-            border-radius: 10px;
             overflow: hidden;
-            margin-bottom: 24px;
+            position: relative;
         }
 
-        .project-video iframe {
+        .project-media iframe {
             width: 100%;
             height: 100%;
             border: none;
             display: block;
         }
 
+        .project-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .coming-soon-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #7DD3FC;
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(125, 211, 252, 0.3);
+        }
+
+        .project-info {
+            padding: 16px 20px 20px;
+        }
+
         .project-card h2 {
             font-family: 'Inter', sans-serif;
-            font-size: 24px;
+            font-size: 16px;
             font-weight: 700;
             color: #E6EDF7;
-            margin-bottom: 12px;
-            text-align: center;
+            margin: 0;
         }
 
-        .project-card p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: rgba(230, 237, 247, 0.85);
-        }
-
-        .project-social-links {
-            display: flex;
-            gap: 18px;
-            margin-top: 22px;
-            flex-wrap: wrap;
-        }
-
-        .project-social-links .social-icon-container {
-            width: 72px;
-            height: 72px;
-        }
-
-        .project-poster {
-            width: 100%;
-            max-width: 360px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 24px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .project-poster img {
-            width: 100%;
-            height: auto;
-            display: block;
+        @media (max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -120,26 +116,11 @@
                 font-size: 26px;
                 margin-bottom: 24px;
             }
+        }
 
-            .project-card {
-                padding: 24px 20px;
-            }
-
-            .project-card h2 {
-                font-size: 20px;
-            }
-
-            .project-card p {
-                font-size: 15px;
-            }
-
-            .project-social-links {
-                gap: 12px;
-            }
-
-            .project-social-links .social-icon-container {
-                width: 60px;
-                height: 60px;
+        @media (max-width: 520px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -156,24 +137,38 @@
 
     <main>
         <p class="page-title">Projects</p>
-        <div class="projects">
+        <div class="projects-grid">
 
             <div class="project-card">
-                <h2>THE FRIDGE</h2>
-                <div class="project-video">
+                <div class="project-media" style="position:relative;">
+                    <img src="love-pantry-coming-soon.png" alt="Love Pantry – Coming Soon">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+                <div class="project-info"><h2>LOVE PANTRY</h2></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media" style="position:relative;">
+                    <img src="the-bathroom-coming-soon.jpg" alt="The Bathroom – Coming Soon">
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+                <div class="project-info"><h2>THE BATHROOM</h2></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
                     <iframe
-                        src="https://www.youtube.com/embed/u429Jm5RdoU?list=PLAslz-0snME14_KOQZxVOA84V61mPzj64"
+                        src="https://www.youtube.com/embed/Z8s3cpJ5fqk"
                         title="The Fridge"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
                     </iframe>
                 </div>
-                <p>An existential web series that follows various food items as they seek to cope with suffering, mortality, and the challenging search for meaning.</p>
+                <div class="project-info"><h2>THE FRIDGE</h2></div>
             </div>
 
             <div class="project-card">
-                <h2>Great Goats</h2>
-                <div class="project-video">
+                <div class="project-media">
                     <iframe
                         src="https://www.youtube.com/embed/IPHTZ-RsJLY"
                         title="Great Goats"
@@ -181,31 +176,67 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <p>An AI-generated web series documenting the lives of goat versions of very important people throughout history.</p>
-                <div class="project-social-links">
-                    <div class="social-icon-container" data-link="https://www.youtube.com/@KippyStudios/shorts" data-model="socials/YouTube.glb" title="YouTube"></div>
-                    <div class="social-icon-container" data-link="https://www.instagram.com/greatgoatsofficial/" data-model="socials/IG.glb" title="Instagram"></div>
-                    <div class="social-icon-container" data-link="https://www.tiktok.com/@greatgoatsofficial?lang=en" data-model="socials/TikTok.glb" title="TikTok"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <p class="page-title" style="margin-top: 56px;">Upcoming Projects</p>
-        <div class="projects">
-
-            <div class="project-card">
-                <h2>THE BATHROOM</h2>
-                <div class="project-poster">
-                    <img src="the-bathroom-coming-soon.jpg" alt="The Bathroom – Coming Soon">
-                </div>
+                <div class="project-info"><h2>GREAT GOATS</h2></div>
             </div>
 
             <div class="project-card">
-                <h2>Love Pantry</h2>
-                <div class="project-poster">
-                    <img src="love-pantry-coming-soon.png" alt="Love Pantry – Coming Soon">
+                <div class="project-media">
+                    <iframe
+                        src="https://www.youtube.com/embed/eqlYlEGLoMM"
+                        title="Battle for Dream Island"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
                 </div>
+                <div class="project-info"><h2>BFDI</h2></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <iframe
+                        src="https://www.youtube.com/embed/Q8jvUSlfpEI"
+                        title="Super Giant Robot Brothers"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-info"><h2>SUPER GIANT ROBOT BROTHERS</h2></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <iframe
+                        src="https://www.youtube.com/embed/tW5LuLLe6os"
+                        title="Millerverse Super Bowl Commercial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-info"><h2>MILLERVERSE SUPER BOWL COMMERCIAL</h2></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <iframe
+                        src="https://www.youtube.com/embed/vB79h3D46kc"
+                        title="Ella's Magic Castle"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-info"><h2>ELLA'S MAGIC CASTLE</h2></div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <iframe
+                        src="https://www.youtube.com/embed/XuY6PfPsJwg"
+                        title="Chariot AR Medical Simulator"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="project-info"><h2>CHARIOT AR MEDICAL SIMULATOR</h2></div>
             </div>
 
         </div>
