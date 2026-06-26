@@ -313,66 +313,66 @@
         /* ── Mobile ── */
         @media (max-width: 768px) {
             .hero {
-                min-height: auto;
-                padding-top: 60px;
+                min-height: 100vh;
+                padding-top: 72px;
+                padding-left: 20px;
+                padding-right: 20px;
                 align-items: flex-start;
             }
 
+            /* Image fills the full hero as background */
             .hero-bg-slide {
+                inset: 0;
                 width: 100%;
-                top: auto;
-                bottom: 0;
-                height: 55%;
-                align-items: flex-end;
+                height: 100%;
+                right: 0;
             }
 
             .hero-bg-slide img {
                 object-fit: cover;
-                object-position: center top;
+                object-position: center center;
             }
 
+            /* Vertical overlay: dark top for text legibility, fades in middle, dark bottom */
             .hero-overlay {
                 background: linear-gradient(
                     180deg,
-                    #0B1220 40%,
-                    rgba(11,18,32,0.60) 100%
+                    rgba(11,18,32,0.92) 0%,
+                    rgba(11,18,32,0.55) 50%,
+                    rgba(11,18,32,0.88) 100%
                 );
             }
 
             .hero-inner {
-                padding: 60px 20px 160px;
-                gap: 24px;
+                padding: 20px 0 0;
+                gap: 12px;
+                max-width: 100%;
             }
 
-            .hero-heading {
-                font-size: 30px;
+            .hero-logo-img {
+                max-width: 280px;
             }
 
-            .hero-body {
+            .hero-logo-heading {
+                margin-bottom: -40px;
+            }
+
+            .hero-subtitle {
                 font-size: 15px;
+                max-width: 100%;
             }
 
-            .hero-ctas {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-
+            /* Project card pinned to bottom, full width */
             .hero-project-card {
-                right: 20px;
-                bottom: 60px;
                 left: 20px;
+                right: 20px;
+                bottom: 56px;
                 min-width: unset;
             }
 
             .hero-carousel-indicator {
                 left: 20px;
-                bottom: 20px;
+                bottom: 16px;
             }
         }
     </style>
@@ -530,6 +530,8 @@
             var indicator = document.querySelector('.hero-carousel-indicator');
 
             function positionCard(index) {
+                if (window.innerWidth <= 768) return;
+
                 var img  = bgs[index] && bgs[index].querySelector('img');
                 var card = cards[index];
                 if (!img || !img.naturalWidth) return;
@@ -550,6 +552,11 @@
             }
 
             function positionAllCards() {
+                if (window.innerWidth <= 768) {
+                    cards.forEach(function(c) { if (c) { c.style.bottom = ''; c.style.right = ''; } });
+                    if (indicator) { indicator.style.bottom = ''; indicator.style.left = ''; }
+                    return;
+                }
                 for (var i = 0; i < cards.length; i++) positionCard(i);
             }
 
