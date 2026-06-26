@@ -8,7 +8,7 @@
     <meta name="description" content="Kippy Studios is the leader in agentic content production.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preload" href="https://unpkg.com/three@0.160.0/build/three.module.js" as="script" crossorigin>
     <style>
@@ -16,142 +16,370 @@
             display: flex;
             flex-direction: column;
         }
-/* Main Content */
-        main {
-            padding: 100px 50px 48px;
-            max-width: 1180px;
-            margin: 0 auto;
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
             width: 100%;
+            min-height: 80vh;
+            overflow: hidden;
+            padding-top: 72px;
+            display: flex;
+            align-items: flex-start;
+            padding-left: 80px;
+            padding-right: 80px;
         }
 
-        .brand-hero {
-            background: #121A2B;
-            border-radius: 16px;
-            border: 1px solid #1A2438;
-            max-width: 1080px;
-            margin: 0 auto;
+        /* Background image slots — right half of the hero, cross-fading */
+        .hero-bg-slide {
+            position: absolute;
+            top: 0;
+            right: 80px;
+            bottom: 0;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            z-index: 0;
+        }
+
+        .hero-bg-slide.active {
+            opacity: 1;
+        }
+
+        .hero-bg-slide img {
             width: 100%;
-            padding: 36px;
+            height: 100%;
+            object-fit: contain;
+            object-position: right center;
+            display: block;
+        }
+
+        /* Static gradient overlay — blends image into dark background */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                #0B1220 35%,
+                rgba(11,18,32,0.75) 55%,
+                rgba(11,18,32,0.05) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 600px;
+            margin: 0;
+            padding: 24px 0 100px 0;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 20px;
         }
 
-        .brand-header-image {
-            width: 100%;
-            max-width: 880px;
-            margin: 0 auto;
+        .hero-logo-heading {
+            margin: 0 0 -70px;
+            line-height: 1;
+        }
+
+        .hero-logo-img {
             display: block;
-            height: 480px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .brand-content {
-            display: block;
-        }
-
-        .brand-icon {
             width: 100%;
-            max-width: 160px;
+            max-width: 540px;
             height: auto;
-            border-radius: 18px;
-            border: 1px solid #1A2438;
-            background: rgba(255, 255, 255, 0.03);
-            padding: 6px;
         }
 
-        .brand-copy h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 40px;
-            font-weight: 700;
-            color: #E6EDF7;
-            margin-bottom: 16px;
+        .hero-body {
+            font-size: 17px;
+            line-height: 1.65;
+            color: rgba(230, 237, 247, 0.78);
+            max-width: 520px;
         }
 
-        .brand-copy p,
-        .brand-copy li {
-            font-size: 18px;
-            line-height: 1.5;
-            color: rgba(230, 237, 247, 0.9);
-        }
-
-        .brand-copy p {
-            margin-bottom: 1em;
-        }
-
-        .brand-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-        .brand-copy ul {
-            margin: 0 0 1em 0;
-            padding-left: 2em;
-        }
-
-        .brand-copy li {
-            margin-bottom: 0;
-        }
-
-        .brand-copy strong {
+        .hero-body strong {
             color: #7DD3FC;
-            font-weight: 700;
+            font-weight: 600;
         }
 
-        .brand-copy a {
+        .hero-body ul {
+            margin: 0.6em 0 0.6em 1.4em;
+        }
+
+        .hero-body li {
+            margin-bottom: 0.2em;
+        }
+
+        .hero-body a {
             color: #93C5FD;
             text-decoration: underline;
             text-underline-offset: 3px;
         }
 
-        .social-icon-container {
-            width: 100px;
-            height: 100px;
-            cursor: pointer;
-            transition: transform 0.3s;
+        .hero-subtitle {
+            font-size: clamp(16px, 2vw, 22px);
+            font-weight: 500;
+            line-height: 1.4;
+            color: #E6EDF7;
+            max-width: 540px;
         }
-/* Mobile Responsive */
-        @media (max-width: 768px) {main {
-                padding: 80px 20px 40px;
+
+        /* Proof metrics */
+        .hero-metrics {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #E6EDF7;
+        }
+
+        .metric-label {
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            color: rgba(230, 237, 247, 0.5);
+            text-transform: uppercase;
+        }
+
+        /* CTA buttons */
+        .hero-ctas {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: #3B82F6;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            letter-spacing: 0.4px;
+            transition: background 0.2s, transform 0.15s;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: #2563EB;
+            transform: translateY(-1px);
+        }
+
+        .btn-primary svg {
+            flex-shrink: 0;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 28px;
+            background: transparent;
+            color: #E6EDF7;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid rgba(230, 237, 247, 0.25);
+            letter-spacing: 0.4px;
+            transition: border-color 0.2s, background 0.2s, transform 0.15s;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(230, 237, 247, 0.6);
+            background: rgba(230, 237, 247, 0.06);
+            transform: translateY(-1px);
+        }
+
+        /* Project card — above overlay (z-index 3), JS pins to bottom-right of image */
+        .hero-project-card {
+            position: absolute;
+            right: 100px; /* fallback, overridden by JS */
+            bottom: 60px; /* fallback, overridden by JS */
+            z-index: 3;
+            background: rgba(11,18,32,0.75);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 14px 18px;
+            min-width: 160px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s ease;
+        }
+
+        .hero-project-card.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .project-card-label {
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #3B82F6;
+            margin-bottom: 4px;
+        }
+
+        .project-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #E6EDF7;
+            margin-bottom: 2px;
+        }
+
+        .project-card-sub {
+            font-size: 12px;
+            color: rgba(230,237,247,0.55);
+            margin-bottom: 12px;
+        }
+
+        .project-card-link {
+            font-size: 12px;
+            font-weight: 600;
+            color: #3B82F6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            letter-spacing: 0.3px;
+            transition: color 0.2s;
+        }
+
+        .project-card-link:hover {
+            color: #93C5FD;
+        }
+
+        /* Carousel indicator */
+        .hero-carousel-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            bottom: 28px;
+            left: 100px;
+            z-index: 4;
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .carousel-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(230,237,247,0.25);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: background 0.2s, width 0.2s;
+        }
+
+        .carousel-dot.active {
+            background: #3B82F6;
+            width: 18px;
+            border-radius: 3px;
+        }
+
+        .carousel-dot:not(.active):hover {
+            background: rgba(230,237,247,0.5);
+        }
+
+        .carousel-count {
+            font-size: 11px;
+            color: rgba(230,237,247,0.4);
+            letter-spacing: 1px;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding-top: 60px;
+                align-items: flex-start;
             }
 
-            .brand-hero {
-                padding: 18px;
+            .hero-bg-slide {
+                width: 100%;
+                top: auto;
+                bottom: 0;
+                height: 55%;
+                align-items: flex-end;
             }
 
-            .brand-header-image {
-                height: auto;
-                object-fit: unset;
+            .hero-bg-slide img {
+                object-fit: cover;
+                object-position: center top;
             }
 
-            .brand-content {
-                grid-template-columns: 1fr;
-                justify-items: center;
-                text-align: center;
+            .hero-overlay {
+                background: linear-gradient(
+                    180deg,
+                    #0B1220 40%,
+                    rgba(11,18,32,0.60) 100%
+                );
             }
 
-            .brand-icon {
-                max-width: 150px;
+            .hero-inner {
+                padding: 60px 20px 160px;
+                gap: 24px;
             }
 
-            .brand-copy h1 {
-                font-size: 28px;
+            .hero-heading {
+                font-size: 30px;
             }
 
-            .brand-copy p {
+            .hero-body {
                 font-size: 15px;
             }
 
-            .social-icon-container {
-                width: 70px;
-                height: 70px;
+            .hero-ctas {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-project-card {
+                right: 20px;
+                bottom: 60px;
+                left: 20px;
+                min-width: unset;
+            }
+
+            .hero-carousel-indicator {
+                left: 20px;
+                bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">KIPPY STUDIOS</a>
+        <a href="index.html" class="logo"><img src="kippy-studios-logo.png" alt="Kippy Studios" class="nav-logo-img"></a>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
@@ -159,36 +387,89 @@
         </div>
     </nav>
 
-    <main>
-        <section class="brand-hero" aria-labelledby="kippy-studios-heading">
-            <img class="brand-header-image" src="Header_v03.png" alt="Kippy Studios header logo">
-            <div class="brand-content">
-                <div class="brand-copy">
-                    <p>We are a boutique animation studio focused on creative storytelling using cutting edge technologies. We have produced award winning IP including <strong>THE FRIDGE</strong>, <strong>THE BATHROOM</strong>, and <strong>Ron Roach</strong>.</p>
-                    <p>We've also collaborated with a number of partners including:</p>
-                    <ul>
-                        <li><strong>ReelFX</strong> on the Netflix series Super Giant Robot Brothers</li>
-                        <li><strong>Golden LA</strong> on a Super Bowl commercial</li>
-                        <li><strong>jacknjellify</strong> on Battle for Dream Island and TPOT</li>
-                    </ul>
-                    <p>Please reach out to <a href="mailto:kippystudios@gmail.com">kippystudios@gmail.com</a> if you'd like to collaborate with us on:</p>
-                    <ul>
-                        <li>Virtual production</li>
-                        <li>AI workflows for content production</li>
-                        <li>XR Projects</li>
-                        <li>Data visualization</li>
-                    </ul>
-                    <p>* Kippy Studios was previously known as AR Dimension and Glorious Goats Animation</p>
-                </div>
+    <!-- ── Hero ── -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+        <!-- Rotating backgrounds -->
+        <div class="hero-bg-slide active">
+            <img src="https://img.youtube.com/vi/CnhX6bjEPXk/maxresdefault.jpg" alt="The Bathroom — Original Animated Series">
+        </div>
+        <div class="hero-bg-slide">
+            <img src="https://img.youtube.com/vi/PSyKONIfqiM/maxresdefault.jpg" alt="The Fridge — Animated Short">
+        </div>
+        <div class="hero-bg-slide">
+            <img src="https://img.youtube.com/vi/SQJE7rkXqWk/maxresdefault.jpg" alt="Ron Roach — Animated Short">
+        </div>
+        <div class="hero-bg-slide">
+            <img src="https://img.youtube.com/vi/Q8jvUSlfpEI/maxresdefault.jpg" alt="Super Giant Robot Brothers">
+        </div>
+
+        <!-- Static gradient overlay -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Static text content -->
+        <div class="hero-inner">
+            <h1 id="hero-heading" class="hero-logo-heading">
+                <img src="kippy-studios-title.png" alt="Kippy Studios" class="hero-logo-img">
+            </h1>
+
+            <p class="hero-subtitle">Building the next generation of character-driven, social-first entertainment.</p>
+
+        </div>
+
+        <!-- Rotating project cards — z-index above overlay so they sit on the image -->
+        <div class="hero-project-card active">
+            <p class="project-card-label">Kippy Studios Original</p>
+            <p class="project-card-title">THE BATHROOM</p>
+            <p class="project-card-sub">Releasing Weekly</p>
+            <a class="project-card-link" href="https://www.instagram.com/cobypal/reel/DZ8rlPfOWQp/" target="_blank" rel="noopener noreferrer">
+                Watch Ep 1 here
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+        </div>
+        <div class="hero-project-card">
+            <p class="project-card-label">Kippy Studios Original</p>
+            <p class="project-card-title">THE FRIDGE</p>
+            <a class="project-card-link" href="https://www.youtube.com/watch?v=PSyKONIfqiM" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+        </div>
+        <div class="hero-project-card">
+            <p class="project-card-label">Kippy Studios Original</p>
+            <p class="project-card-title">RON ROACH</p>
+            <a class="project-card-link" href="https://www.youtube.com/watch?v=SQJE7rkXqWk" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+        </div>
+        <div class="hero-project-card">
+            <p class="project-card-label">Netflix</p>
+            <p class="project-card-title">SUPER GIANT ROBOT BROTHERS</p>
+            <p class="project-card-sub">Reel FX Production</p>
+            <a class="project-card-link" href="https://www.youtube.com/watch?v=Q8jvUSlfpEI" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+        </div>
+
+        <!-- Carousel indicator -->
+        <div class="hero-carousel-indicator">
+            <div class="carousel-dots" role="tablist" aria-label="Hero slides">
+                <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1: The Bathroom" data-target="0"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2: The Fridge" data-target="1"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3: Ron Roach" data-target="2"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4: Super Giant Robot Brothers" data-target="3"></button>
             </div>
-        </section>
-    </main>
+            <span class="carousel-count" aria-live="polite">1 / 4</span>
+        </div>
+    </section>
 
     <footer>
         <div class="social-links-3d" id="social-links-3d">
-            <div class="social-icon-container" data-link="https://www.youtube.com/@KippyStudios/shorts" data-model="socials/YouTube.glb" title="YouTube"></div>
-            <div class="social-icon-container" data-link="https://www.instagram.com/kippystudios/" data-model="socials/IG.glb" title="Instagram"></div>
-            <div class="social-icon-container" data-link="https://www.tiktok.com/@kippystudios?lang=en" data-model="socials/TikTok.glb" title="TikTok"></div>
+            <div class="social-icon-container" data-link="https://www.youtube.com/@CobyPal/featured" data-model="socials/YouTube.glb" title="YouTube"></div>
+            <div class="social-icon-container" data-link="https://www.instagram.com/cobypal/" data-model="socials/IG.glb" title="Instagram"></div>
+            <div class="social-icon-container" data-link="https://www.tiktok.com/@cobypal" data-model="socials/TikTok.glb" title="TikTok"></div>
             <div class="social-icon-container" data-link="https://x.com/kippystudios" data-model="socials/X.glb" title="X"></div>
             <div class="social-icon-container" data-link="https://www.threads.com/@kippystudios" data-model="socials/Threads.glb" title="Threads"></div>
             <div class="social-icon-container" data-link="https://www.linkedin.com/company/kippystudios/?viewAsMember=true" data-model="socials/LinkedIn.glb" title="LinkedIn"></div>
@@ -209,6 +490,109 @@
     <script type="module">
         import { initSocialIcons } from './social-icons.js';
         initSocialIcons();
+    </script>
+
+    <script>
+        (function () {
+            const hero   = document.getElementById('hero');
+            const bgs    = document.querySelectorAll('.hero-bg-slide');
+            const cards  = document.querySelectorAll('.hero-project-card');
+            const dots   = document.querySelectorAll('.carousel-dot:not([disabled])');
+            const count  = document.querySelector('.carousel-count');
+            const TOTAL  = 4;
+            let current  = 0;
+            let timer;
+
+            // Calculate actual rendered rect of an object-fit:contain image
+            function getRenderedRect(img) {
+                var el   = img.getBoundingClientRect();
+                var natW = img.naturalWidth  || 16;
+                var natH = img.naturalHeight || 9;
+                var elAsp  = el.width / el.height;
+                var imgAsp = natW / natH;
+                var rW, rH;
+                if (imgAsp > elAsp) {
+                    rW = el.width;
+                    rH = el.width / imgAsp;
+                } else {
+                    rH = el.height;
+                    rW = el.height * imgAsp;
+                }
+                // object-position: right center
+                return {
+                    right:  el.right,
+                    bottom: el.top + (el.height + rH) / 2,
+                    width:  rW,
+                    height: rH
+                };
+            }
+
+            var indicator = document.querySelector('.hero-carousel-indicator');
+
+            function positionCard(index) {
+                var img  = bgs[index] && bgs[index].querySelector('img');
+                var card = cards[index];
+                if (!img || !img.naturalWidth) return;
+
+                var heroRect = hero.getBoundingClientRect();
+                var rendered = getRenderedRect(img);
+
+                if (card) {
+                    card.style.bottom = (heroRect.bottom - rendered.bottom + 16) + 'px';
+                    card.style.right  = (heroRect.right  - rendered.right  + 16) + 'px';
+                }
+
+                // Pin indicator to bottom-left of image on the active slide
+                if (index === current && indicator) {
+                    indicator.style.bottom = (heroRect.bottom - rendered.bottom + 16) + 'px';
+                    indicator.style.left   = (rendered.right - rendered.width - heroRect.left + 16) + 'px';
+                }
+            }
+
+            function positionAllCards() {
+                for (var i = 0; i < cards.length; i++) positionCard(i);
+            }
+
+            bgs.forEach(function(slide, i) {
+                var img = slide.querySelector('img');
+                if (!img) return;
+                if (img.complete && img.naturalWidth) positionCard(i);
+                else img.addEventListener('load', function() { positionCard(i); });
+            });
+            window.addEventListener('resize', positionAllCards);
+
+            function goTo(index) {
+                bgs[current].classList.remove('active');
+                cards[current] && cards[current].classList.remove('active');
+                dots[current]  && dots[current].classList.remove('active');
+                dots[current]  && dots[current].setAttribute('aria-selected', 'false');
+
+                current = index;
+
+                bgs[current].classList.add('active');
+                cards[current] && cards[current].classList.add('active');
+                dots[current]  && dots[current].classList.add('active');
+                dots[current]  && dots[current].setAttribute('aria-selected', 'true');
+                count.textContent = (current + 1) + ' / ' + TOTAL;
+                positionCard(current);
+
+                clearInterval(timer);
+                timer = setInterval(advance, 15000);
+            }
+
+            function advance() {
+                goTo((current + 1) % bgs.length);
+            }
+
+            dots.forEach(function (dot) {
+                dot.addEventListener('click', function () {
+                    var target = parseInt(dot.getAttribute('data-target'), 10);
+                    if (target < bgs.length) goTo(target);
+                });
+            });
+
+            timer = setInterval(advance, 15000);
+        })();
     </script>
 </body>
 </html>

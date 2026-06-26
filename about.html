@@ -23,22 +23,58 @@
             width: 100%;
         }
 
+        .founders-hero {
+            max-width: 1080px;
+            margin: 0 auto 32px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .founders-hero img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            object-position: center 75%;
+            display: block;
+        }
+
+        .studio-intro {
+            max-width: 1080px;
+            margin: 0 auto 48px;
+            padding: 32px 36px;
+            background: #121A2B;
+            border-radius: 16px;
+            border: 1px solid #1A2438;
+        }
+
+        .studio-intro p {
+            font-size: 18px;
+            line-height: 1.75;
+            color: rgba(230, 237, 247, 0.85);
+            margin: 0;
+        }
+
         .page-title {
             font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(230, 237, 247, 0.4);
+            font-size: 36px;
+            font-weight: 700;
+            color: #E6EDF7;
             margin-bottom: 32px;
+            max-width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .founders {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             gap: 24px;
             max-width: 1080px;
             margin: 0 auto;
+        }
+
+        .founders .founder-card {
+            flex: 1;
         }
 
         .founder-card {
@@ -46,33 +82,7 @@
             border-radius: 16px;
             border: 1px solid #1A2438;
             padding: 36px;
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 32px;
-            align-items: start;
-        }
-
-        .founder-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .founder-avatar {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 1px solid #1A2438;
-            background: rgba(255, 255, 255, 0.04);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Inter', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: rgba(230, 237, 247, 0.15);
-            flex-shrink: 0;
+            display: block;
         }
 
         .founder-info h2 {
@@ -111,23 +121,60 @@
             margin-bottom: 0;
         }
 
+        .founder-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            color: #7DD3FC;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .founder-linkedin:hover {
+            opacity: 1;
+        }
+
+        .founder-linkedin svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .founder-email {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 16px;
+            margin-left: 12px;
+            color: #7DD3FC;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .founder-email:hover {
+            opacity: 1;
+        }
+
+        .founder-email svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
         @media (max-width: 768px) {
             main {
                 padding: 80px 20px 40px;
             }
 
-            .founder-card {
-                grid-template-columns: 1fr;
-                justify-items: center;
-                text-align: center;
-                padding: 24px 20px;
-                gap: 20px;
+            .founders {
+                flex-direction: column;
             }
 
-            .founder-avatar {
-                width: 120px;
-                height: 120px;
-                font-size: 36px;
+            .founder-card {
+                padding: 24px 20px;
             }
 
             .founder-info h2 {
@@ -142,7 +189,7 @@
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">KIPPY STUDIOS</a>
+        <a href="index.html" class="logo"><img src="kippy-studios-logo.png" alt="Kippy Studios" class="nav-logo-img"></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html" class="active">About</a>
@@ -151,31 +198,49 @@
     </nav>
 
     <main>
+        <div class="founders-hero">
+            <img src="founders-photo.jpg" alt="Kippy Studios founders">
+        </div>
+
+        <div class="studio-intro">
+            <p>Kippy Studios is a cutting-edge animation studio creating original universes and award-winning stories. By combining recurring characters, story-driven content, and social-first distribution, we develop entertainment properties that audiences follow across platforms while creating authentic partnership opportunities for brands.</p>
+        </div>
+
         <p class="page-title">The Founders</p>
         <div class="founders">
 
             <div class="founder-card">
-                <div class="founder-avatar"><img src="coby-avatar.png" alt="Coby Palivathukal"></div>
                 <div class="founder-info">
-                    <h2><a href="https://www.linkedin.com/in/cobypalivathukal/" target="_blank" rel="noopener noreferrer">Coby Palivathukal</a></h2>
+                    <h2>Coby Palivathukal</h2>
                     <p class="founder-title">Co-founder &amp; Head of Creative</p>
                     <div class="founder-bio">
                         <p>Coby is an award-winning filmmaker and creative technologist working at the intersection of animation, storytelling, and emerging media.</p>
                         <p>He currently works as a Producer at Meta, where he leads the production of visual assets for the Facebook brand and helps integrate generative AI tools into creative workflows.</p>
                         <p>Coby holds a BA in Philosophy with a minor in Film &amp; Media Studies from Stanford University and an MFA in Animation &amp; Digital Arts from USC's School of Cinematic Arts.</p>
+                        <a href="https://www.linkedin.com/in/cobypalivathukal/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:coby@kippystudios.com" class="founder-email">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="founder-card">
-                <div class="founder-avatar"><img src="brendan-avatar.png" alt="Brendan Healy" style="object-position: center 30%;"></div>
                 <div class="founder-info">
-                    <h2><a href="https://www.linkedin.com/in/healy-brendan/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bt7CTpj28Sdy445xUI6bkEw%3D%3D" target="_blank" rel="noopener noreferrer">Brendan Healy</a></h2>
+                    <h2>Brendan Healy</h2>
                     <p class="founder-title">Co-founder &amp; Head of Operations</p>
                     <div class="founder-bio">
                         <p>Brendan is a product builder working at the intersection of media, technology, and creative systems.</p>
                         <p>He currently serves as a Product Owner at Apple TV, where he develops internal tools and automation platforms that power studio operations and large-scale content workflows.</p>
                         <p>He holds a BA in History with a minor in Film from UCLA and will begin his MBA at Wharton later this year.</p>
+                        <a href="https://www.linkedin.com/in/healy-brendan/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:brendan@kippystudios.com" class="founder-email">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -185,9 +250,9 @@
 
     <footer>
         <div class="social-links-3d" id="social-links-3d">
-            <div class="social-icon-container" data-link="https://www.youtube.com/@KippyStudios/shorts" data-model="socials/YouTube.glb" title="YouTube"></div>
-            <div class="social-icon-container" data-link="https://www.instagram.com/kippystudios/" data-model="socials/IG.glb" title="Instagram"></div>
-            <div class="social-icon-container" data-link="https://www.tiktok.com/@kippystudios?lang=en" data-model="socials/TikTok.glb" title="TikTok"></div>
+            <div class="social-icon-container" data-link="https://www.youtube.com/@CobyPal/featured" data-model="socials/YouTube.glb" title="YouTube"></div>
+            <div class="social-icon-container" data-link="https://www.instagram.com/cobypal/" data-model="socials/IG.glb" title="Instagram"></div>
+            <div class="social-icon-container" data-link="https://www.tiktok.com/@cobypal" data-model="socials/TikTok.glb" title="TikTok"></div>
             <div class="social-icon-container" data-link="https://x.com/kippystudios" data-model="socials/X.glb" title="X"></div>
             <div class="social-icon-container" data-link="https://www.threads.com/@kippystudios" data-model="socials/Threads.glb" title="Threads"></div>
             <div class="social-icon-container" data-link="https://www.linkedin.com/company/kippystudios/?viewAsMember=true" data-model="socials/LinkedIn.glb" title="LinkedIn"></div>
