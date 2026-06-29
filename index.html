@@ -266,15 +266,50 @@
             color: #93C5FD;
         }
 
+        /* Carousel arrows */
+        .carousel-arrows-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .carousel-arrow {
+            background: rgba(11,18,32,0.55);
+            border: 1px solid rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            color: #E6EDF7;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            padding: 0;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(59,130,246,0.5);
+            border-color: rgba(59,130,246,0.6);
+        }
+
         /* Carousel indicator */
         .hero-carousel-indicator {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
             position: absolute;
             bottom: 28px;
             left: 100px;
             z-index: 4;
+        }
+
+        .carousel-dots-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .carousel-dots {
@@ -313,66 +348,54 @@
         /* ── Mobile ── */
         @media (max-width: 768px) {
             .hero {
-                min-height: 100vh;
-                padding-top: 72px;
-                padding-left: 20px;
-                padding-right: 20px;
+                min-height: unset;
+                padding: 0;
                 align-items: flex-start;
             }
 
-            /* Image fills the full hero as background */
-            .hero-bg-slide {
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                right: 0;
-            }
-
-            .hero-bg-slide img {
-                object-fit: cover;
-                object-position: center center;
-            }
-
-            /* Vertical overlay: dark top for text legibility, fades in middle, dark bottom */
-            .hero-overlay {
-                background: linear-gradient(
-                    180deg,
-                    rgba(11,18,32,0.92) 0%,
-                    rgba(11,18,32,0.55) 50%,
-                    rgba(11,18,32,0.88) 100%
-                );
-            }
-
+            /* Title pinned just below nav */
             .hero-inner {
-                padding: 20px 0 0;
-                gap: 12px;
-                max-width: 100%;
+                position: absolute;
+                top: 82px;
+                left: 20px;
+                right: 20px;
+                width: auto;
+                max-width: none;
+                z-index: 5;
+                padding: 0;
+                gap: 6px;
             }
 
             .hero-logo-img {
-                max-width: 280px;
+                max-width: 200px;
             }
 
             .hero-logo-heading {
-                margin-bottom: -40px;
+                margin-bottom: -25px;
             }
 
             .hero-subtitle {
-                font-size: 15px;
+                font-size: 13px;
                 max-width: 100%;
             }
 
-            /* Project card pinned to bottom, full width */
-            .hero-project-card {
-                left: 20px;
-                right: 20px;
-                bottom: 56px;
-                min-width: unset;
+            /* Image slides: JS sets top/height */
+            .hero-bg-slide img {
+                object-fit: cover;
+                object-position: center;
             }
 
-            .hero-carousel-indicator {
-                left: 20px;
-                bottom: 16px;
+            /* Overlay: JS sets top/height to match image */
+            .hero-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(11,18,32,0) 55%,
+                    rgba(11,18,32,0.8) 100%
+                );
+            }
+
+            .hero-project-card {
+                min-width: unset;
             }
         }
     </style>
@@ -453,15 +476,25 @@
             </a>
         </div>
 
-        <!-- Carousel indicator -->
+        <!-- Carousel indicator + arrows -->
         <div class="hero-carousel-indicator">
-            <div class="carousel-dots" role="tablist" aria-label="Hero slides">
-                <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1: The Bathroom" data-target="0"></button>
-                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2: The Fridge" data-target="1"></button>
-                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3: Ron Roach" data-target="2"></button>
-                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4: Super Giant Robot Brothers" data-target="3"></button>
+            <div class="carousel-dots-row">
+                <div class="carousel-dots" role="tablist" aria-label="Hero slides">
+                    <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1: The Bathroom" data-target="0"></button>
+                    <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2: The Fridge" data-target="1"></button>
+                    <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3: Ron Roach" data-target="2"></button>
+                    <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4: Super Giant Robot Brothers" data-target="3"></button>
+                </div>
+                <span class="carousel-count" aria-live="polite">1 / 4</span>
             </div>
-            <span class="carousel-count" aria-live="polite">1 / 4</span>
+            <div class="carousel-arrows-row">
+                <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous slide">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="carousel-arrow carousel-arrow-next" aria-label="Next slide">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -528,9 +561,59 @@
             }
 
             var indicator = document.querySelector('.hero-carousel-indicator');
+            var heroInner = document.querySelector('.hero-inner');
+            var overlay   = document.querySelector('.hero-overlay');
+
+            // Mobile: measure title height, then place image below it, card overlapping bottom, indicator below card
+            function positionMobile() {
+                var navH    = 82; // nav height + small gap
+                var titleH  = heroInner ? heroInner.offsetHeight : 70;
+                var gap     = 12;
+                var imgTop  = navH + titleH + gap;
+                var imgH    = Math.round(window.innerWidth * 0.5625); // 16:9
+
+                bgs.forEach(function(slide) {
+                    slide.style.top    = imgTop + 'px';
+                    slide.style.bottom = 'auto';
+                    slide.style.left   = '0';
+                    slide.style.right  = '0';
+                    slide.style.width  = '100%';
+                    slide.style.height = imgH + 'px';
+                });
+
+                if (overlay) {
+                    overlay.style.top    = imgTop + 'px';
+                    overlay.style.bottom = 'auto';
+                    overlay.style.left   = '0';
+                    overlay.style.right  = '0';
+                    overlay.style.height = imgH + 'px';
+                }
+
+                // Card overlaps bottom of image by 30px
+                var cardTop = imgTop + imgH - 30;
+                cards.forEach(function(card) {
+                    card.style.top    = cardTop + 'px';
+                    card.style.bottom = 'auto';
+                    card.style.left   = '20px';
+                    card.style.right  = '20px';
+                });
+
+                var activeCard = document.querySelector('.hero-project-card.active');
+                var cardH = activeCard ? activeCard.offsetHeight : 110;
+
+                if (indicator) {
+                    indicator.style.top    = (cardTop + cardH + 10) + 'px';
+                    indicator.style.bottom = 'auto';
+                    indicator.style.left   = '20px';
+                }
+
+                var indH = indicator ? indicator.offsetHeight : 70;
+                hero.style.height    = (cardTop + cardH + indH + 24) + 'px';
+                hero.style.minHeight = 'unset';
+            }
 
             function positionCard(index) {
-                if (window.innerWidth <= 768) return;
+                if (window.innerWidth <= 768) { positionMobile(); return; }
 
                 var img  = bgs[index] && bgs[index].querySelector('img');
                 var card = cards[index];
@@ -540,23 +623,25 @@
                 var rendered = getRenderedRect(img);
 
                 if (card) {
+                    card.style.top    = '';
                     card.style.bottom = (heroRect.bottom - rendered.bottom + 16) + 'px';
                     card.style.right  = (heroRect.right  - rendered.right  + 16) + 'px';
+                    card.style.left   = '';
                 }
 
-                // Pin indicator to bottom-left of image on the active slide
                 if (index === current && indicator) {
+                    indicator.style.top    = '';
                     indicator.style.bottom = (heroRect.bottom - rendered.bottom + 16) + 'px';
                     indicator.style.left   = (rendered.right - rendered.width - heroRect.left + 16) + 'px';
                 }
             }
 
             function positionAllCards() {
-                if (window.innerWidth <= 768) {
-                    cards.forEach(function(c) { if (c) { c.style.bottom = ''; c.style.right = ''; } });
-                    if (indicator) { indicator.style.bottom = ''; indicator.style.left = ''; }
-                    return;
-                }
+                if (window.innerWidth <= 768) { positionMobile(); return; }
+                // Clear any mobile inline styles
+                bgs.forEach(function(s) { s.style.top = s.style.height = s.style.left = s.style.right = s.style.width = s.style.bottom = ''; });
+                if (overlay) { overlay.style.top = overlay.style.height = overlay.style.left = overlay.style.right = overlay.style.bottom = ''; }
+                hero.style.height = hero.style.minHeight = '';
                 for (var i = 0; i < cards.length; i++) positionCard(i);
             }
 
@@ -566,6 +651,7 @@
                 if (img.complete && img.naturalWidth) positionCard(i);
                 else img.addEventListener('load', function() { positionCard(i); });
             });
+            if (window.innerWidth <= 768) positionMobile();
             window.addEventListener('resize', positionAllCards);
 
             function goTo(index) {
@@ -596,6 +682,14 @@
                     var target = parseInt(dot.getAttribute('data-target'), 10);
                     if (target < bgs.length) goTo(target);
                 });
+            });
+
+            document.querySelector('.carousel-arrow-prev').addEventListener('click', function () {
+                goTo((current - 1 + bgs.length) % bgs.length);
+            });
+
+            document.querySelector('.carousel-arrow-next').addEventListener('click', function () {
+                goTo((current + 1) % bgs.length);
             });
 
             timer = setInterval(advance, 15000);
