@@ -12,3 +12,16 @@ document.querySelectorAll(".video-poster").forEach((button) => {
     frame.focus();
   });
 });
+
+// Center John in the mobile scrolling lineup without animating it.
+const lineup = document.querySelector(".ensemble-viewport");
+if (lineup) {
+  const centerLineup = () => {
+    if (matchMedia("(max-width: 700px)").matches)
+      lineup.scrollLeft = (lineup.scrollWidth - lineup.clientWidth) / 2;
+  };
+  const image = lineup.querySelector("img");
+  if (image.complete) centerLineup();
+  else image.addEventListener("load", centerLineup, { once: true });
+  window.addEventListener("resize", centerLineup);
+}

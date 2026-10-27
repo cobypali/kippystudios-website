@@ -1,23 +1,25 @@
 # Kippy Studios Website
 
-Static HTML/CSS/JavaScript site for Kippy Studios. No build step or runtime dependency is required.
+Static HTML/CSS/JavaScript site. No build step or runtime dependency is required.
 
 ## Local review
 
-From this directory, run `python3 -m http.server 8765 --bind 127.0.0.1`, then open http://127.0.0.1:8765/.
+Run `python3 -m http.server 8765 --bind 127.0.0.1` from this directory, then open http://127.0.0.1:8765/.
 
-Routes: `index.html` (home), `about.html` (studio), `projects.html` (originals), and `team.html` (team). Original routes remain available. Video players load only when a visitor selects Play Film; existing watch links remain available. Social links work without JavaScript or WebGL. Expandable biographies use native HTML details controls. Fonts fall back to Arial if Google Fonts is unavailable.
+Navigation contains Home, Our Work, and Team. Routes are `index.html`, `projects.html`, and `team.html`; the legacy `about.html` URL redirects to Team and includes a fallback link. Existing video, social, and profile/contact destinations are preserved.
 
-## Brand assets
+The main tagline is the final user-selected sentence: “Premium animation for original stories and branded collaborations.” The brand title uses the static, filled metallic CSS treatment selected from the user's visual reference. No gold animation, transition, pulsing, moving reflection, or brightness effect is implemented. The former pale rendered title overlays remain preserved as unused assets; the approved Humster and coin source artwork is unchanged.
 
-`assets/` contains optimized WebP derivatives of the approved Facecap Humster logo render and final physically rendered 3D solid-gold lettering PNG overlays, the final Without John character cover, and the existing public project thumbnails. The Humster source is the approved front render, not the Mixamo model. The gold lettering comes from `Gold Lettering Overlays/Solid Gold Final/`, using the two PNG files ending `_Final.png`. It contains actual extruded and beveled 3D gold, not the v01 Photoshop-effect drafts. Arial Bold is an approximation of the raster coin lettering; exact font recovery is not claimed. Responsive derivatives preserve the render's transparent counters and exterior. PSD/model sources were not edited. The original repository images, social models and script remain in place for preservation, and are no longer loaded by the redesigned pages.
+## Character image
 
-`ASSET-MANIFEST.json` records provenance, file dimensions, byte sizes, source hashes, original image inventory, and legacy Drive archive IDs. Six missing legacy water-tower assets were added to V02 WATER TOWER; existing Header_v03 and Icon_v02 copies were verified byte-for-byte, and duplicate favicon.png was not uploaded again. No sharing settings changed.
+The homepage ensemble is derived directly from `Foo_Ensemble_WithJohn_8K.png` (7680 × 4320), from the approved With John / Masters Drive folder. It is cropped to (240, 1250, 7480, 3850), preserving the cast with little empty space above and below. Responsive WebP derivatives run from 1280 to 7200 pixels wide. Retina desktop/mobile checks confirm sufficient source pixels for the rendered size. On narrow screens the image stays tall and horizontally scrollable, initially centered on John; every character remains accessible.
+
+`ASSET-MANIFEST.json` records provenance, dimensions, sizes, hashes, and the completed legacy water-tower archive. Original repository images, models, and user files remain preserved.
 
 ## Validation
 
-Reviewed at desktop 1440, tablet 768, and mobile 390/320 pixels. Checked every route for images, horizontal overflow, page heading/navigation semantics, team details, navigation, video activation, and reduced motion. Axe WCAG A/AA checks reported no violations on all four pages at desktop and mobile sizes. JavaScript syntax and local link checks passed.
+Checked all three pages at 1440/768/390/320px with 2× desktop and 3× mobile rendering, along with the legacy redirect, exact seven-person team roster/titles, links, image selection, video activation, no horizontal page overflow, and frame stability of the gold title. Axe WCAG A/AA desktop/mobile checks report no violations. Sources and original artwork are checked by SHA-256. Full check reports and review screenshots are kept in the task workspace.
 
 ## Publishing
 
-GitHub Pages publishes the repository root from `main` to https://kippystudios.com/. The existing `pages-build-deployment` workflow handles publishing after a normal push. The custom domain and HTTPS configuration are unchanged.
+The existing GitHub Pages setup publishes the repository root from `main` to https://kippystudios.com/. Releases use the established `main`-branch Pages workflow; no DNS, credential, or hosting-setting changes are required.

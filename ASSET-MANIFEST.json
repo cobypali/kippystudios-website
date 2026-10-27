@@ -127,6 +127,51 @@
       "sha256": "0af918b510a48d239c32a5f0a463b3598d677c1950f733aa0147eaa871c78f37"
     },
     {
+      "path": "assets/ensemble-with-john-1280.webp",
+      "bytes": 117194,
+      "dimensions": [
+        1280,
+        460
+      ],
+      "sha256": "802c47d3229dc5bdb37fa9e1fe6d87dce250db44689c76135926dfbfd67be070"
+    },
+    {
+      "path": "assets/ensemble-with-john-2560.webp",
+      "bytes": 349608,
+      "dimensions": [
+        2560,
+        919
+      ],
+      "sha256": "6aba60dda8f9f8aa12b09519a18140ee73ec029d193df9c92205e9e551c89a61"
+    },
+    {
+      "path": "assets/ensemble-with-john-3840.webp",
+      "bytes": 667542,
+      "dimensions": [
+        3840,
+        1379
+      ],
+      "sha256": "556a82250e5662e31c1c469f26149fb6dc96a7e7b3fedc0010be78cff327288a"
+    },
+    {
+      "path": "assets/ensemble-with-john-5120.webp",
+      "bytes": 1012066,
+      "dimensions": [
+        5120,
+        1839
+      ],
+      "sha256": "16c76d14e150e1812e4f13de0fc99869c353b327549f4793380e5ba15b06063c"
+    },
+    {
+      "path": "assets/ensemble-with-john-7200.webp",
+      "bytes": 1697036,
+      "dimensions": [
+        7200,
+        2586
+      ],
+      "sha256": "81895fda214a47eda89ea6f916211c148b27bc7ef7dbda74e3ba58b2ef2a7991"
+    },
+    {
       "path": "assets/favicon.png",
       "bytes": 7459,
       "dimensions": [
@@ -271,6 +316,27 @@
       ]
     }
   ],
-  "character_cover_source": "https://drive.google.com/file/d/1q56-YnGQxlOrUyIZs0e0ri_fjF1Q_Ta8/view (Without John / Upload Ready / Website_Hero.jpg)",
-  "lettering_status": "Final physically rendered 3D solid-gold source PNGs integrated; Arial Bold approximation, not exact recovered coin font."
+  "character_cover_source": {
+    "drive_url": "https://drive.google.com/file/d/1pBEn4sZZvkOkXTuNlcbM9y7Lc-mPOxJ2/view",
+    "filename": "Foo_Ensemble_WithJohn_8K.png",
+    "source_dimensions": [
+      7680,
+      4320
+    ],
+    "source_sha256": "75c5937b1b0ace5c5dd4347761525817a950ff0d49f95a3e38b08647303ddb7e",
+    "website_crop": [
+      240,
+      1250,
+      7480,
+      3850
+    ],
+    "responsive_widths": [
+      1280,
+      2560,
+      3840,
+      5120,
+      7200
+    ]
+  },
+  "lettering_status": "Website brand title now uses the exact static filled metallic gradient treatment selected by the user in libfile_2bafe218a4d8819187f284532fe5229d. Pale PNG title overlays are preserved but no longer used. Approved Humster/coin artwork unchanged."
 }
