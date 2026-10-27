@@ -1,341 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – Kippy Studios</title>
-    <meta name="description" content="Meet the founders of Kippy Studios.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            padding: 100px 50px 48px;
-            max-width: 1180px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .founders-hero {
-            max-width: 1080px;
-            margin: 0 auto 32px;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .founders-hero img {
-            width: 100%;
-            height: 460px;
-            object-fit: cover;
-            object-position: center 65%;
-            display: block;
-        }
-
-        .studio-intro {
-            max-width: 1080px;
-            margin: 0 auto 48px;
-            padding: 32px 36px;
-            background: #121A2B;
-            border-radius: 16px;
-            border: 1px solid #1A2438;
-        }
-
-        .studio-intro p {
-            font-size: 18px;
-            line-height: 1.75;
-            color: rgba(230, 237, 247, 0.85);
-            margin: 0;
-        }
-
-        .page-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: #E6EDF7;
-            margin-bottom: 32px;
-            max-width: 1080px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .founders {
-            display: flex;
-            flex-direction: row;
-            gap: 24px;
-            max-width: 1080px;
-            margin: 0 auto;
-        }
-
-        .founders .founder-card {
-            flex: 1;
-        }
-
-        .founders.founders-single {
-            max-width: 528px;
-        }
-
-        .founder-card {
-            background: #121A2B;
-            border-radius: 16px;
-            border: 1px solid #1A2438;
-            padding: 36px;
-            display: block;
-        }
-
-        .founder-info h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .founder-info h2 a {
-            color: #E6EDF7;
-            text-decoration: none;
-        }
-
-        .founder-info h2 a:hover {
-            text-decoration: underline;
-        }
-
-        .founder-title {
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #7DD3FC;
-            margin-bottom: 20px;
-        }
-
-        .founder-bio p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: rgba(230, 237, 247, 0.85);
-            margin-bottom: 14px;
-        }
-
-        .founder-bio p:last-child {
-            margin-bottom: 0;
-        }
-
-        .founder-linkedin {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 16px;
-            color: #7DD3FC;
-            font-size: 13px;
-            font-weight: 500;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        .founder-linkedin:hover {
-            opacity: 1;
-        }
-
-        .founder-linkedin svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        .founder-email {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 16px;
-            margin-left: 12px;
-            color: #7DD3FC;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        .founder-email:hover {
-            opacity: 1;
-        }
-
-        .founder-email svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        @media (max-width: 768px) {
-            main {
-                padding: 80px 20px 40px;
-            }
-
-            .studio-intro p {
-                font-size: 14px;
-            }
-
-            .founders-hero img {
-                height: 220px;
-            }
-
-            .founders {
-                flex-direction: column;
-            }
-
-            .founder-card {
-                padding: 24px 20px;
-            }
-
-            .founder-info h2 {
-                font-size: 22px;
-            }
-
-            .founder-bio p {
-                font-size: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="index.html" class="logo"><img src="kippy-studios-logo.png" alt="Kippy Studios" class="nav-logo-img"></a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#061333" />
+    <meta
+      name="description"
+      content="An animation studio creating original universes through recurring characters, story-driven content, and social-first distribution."
+    />
+    <title>The Studio — Kippy Studios</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Kippy Studios home"
+        ><img
+          class="brand-icon"
+          src="assets/humster-128.webp"
+          alt=""
+          width="48"
+          height="48" /><img
+          class="brand-wordmark"
+          src="assets/gold-singleline-640.webp"
+          srcset="
+            assets/gold-singleline-640.webp  640w,
+            assets/gold-singleline.webp     1280w
+          "
+          sizes="(max-width: 700px) 60vw, 310px"
+          alt="Kippy Studios"
+          width="215"
+          height="22"
+      /></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="projects.html">Our work</a
+        ><a href="about.html" aria-current="page">Studio</a
+        ><a href="team.html">Team</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="page-intro">
+        <p class="eyebrow">INSIDE THE STUDIO</p>
+        <h1 class="gold-text">THIS IS KIPPY</h1>
+        <p>
+          Building the next generation of character-driven, social-first
+          entertainment.
+        </p>
+      </section>
+      <section class="about-story section">
+        <div class="about-mascot">
+          <img
+            src="assets/humster-640.webp"
+            alt="The approved Kippy Studios Humster mascot"
+            width="509"
+            height="640"
+          />
         </div>
-    </nav>
-
-    <main>
-        <div class="founders-hero">
-            <img src="founders-photo.jpg" alt="Kippy Studios founders">
+        <div>
+          <p class="eyebrow">ORIGINAL WORLDS. LASTING CHARACTERS.</p>
+          <h2>STORIES WITH<br /><span class="gold-text">PERSONALITY.</span></h2>
+          <p>
+            By combining recurring characters, story-driven content, and
+            social-first distribution, we develop entertainment properties that
+            audiences follow across platforms while creating authentic
+            partnership opportunities for brands.
+          </p>
+          <a class="button gold-button" href="team.html">Meet our team ↗</a>
         </div>
-
-        <div class="studio-intro">
-            <p>Kippy Studios is a cutting-edge animation studio creating original universes and award-winning stories. By combining recurring characters, story-driven content, and social-first distribution, we develop entertainment properties that audiences follow across platforms while creating authentic partnership opportunities for brands.</p>
+      </section>
+      <section class="ensemble" aria-label="The Kippy character universe">
+        <img
+          src="assets/characters-1600.webp"
+          srcset="
+            assets/characters-960.webp   960w,
+            assets/characters-1600.webp 1600w,
+            assets/characters-2048.webp 2048w
+          "
+          sizes="100vw"
+          width="2048"
+          height="853"
+          alt="The Kippy ensemble: an eccentric lineup of bathroom, food and everyday-object characters"
+          loading="lazy"
+        />
+        <div class="ensemble-title">
+          <p class="eyebrow">FAMILIAR THINGS. UNEXPECTED PERSONALITIES.</p>
+          <h2>
+            EVERY CHARACTER.<br /><span class="gold-text"
+              >A WORLD OF THEIR OWN.</span
+            >
+          </h2>
         </div>
-
-        <p class="page-title">The Team</p>
-        <div class="founders">
-
-            <div class="founder-card">
-                <div class="founder-info">
-                    <h2>Coby Palivathukal</h2>
-                    <p class="founder-title">Co-founder &amp; Head of Creative</p>
-                    <div class="founder-bio">
-                        <p>Coby is an award-winning filmmaker and creative technologist working at the intersection of animation, storytelling, and emerging media.</p>
-                        <p>Coby holds a BA in Philosophy with a minor in Film &amp; Media Studies from Stanford University and an MFA in Animation &amp; Digital Arts from USC's School of Cinematic Arts.</p>
-                        <a href="https://www.linkedin.com/in/cobypalivathukal/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="mailto:coby@kippystudios.com" class="founder-email">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="founder-card">
-                <div class="founder-info">
-                    <h2>Brendan Healy</h2>
-                    <p class="founder-title">Co-founder &amp; Head of Operations</p>
-                    <div class="founder-bio">
-                        <p>Brendan is a product builder working at the intersection of media, technology, and creative systems.</p>
-                        <p>Brendan holds a BA in History with a minor in Film from UCLA. He is currently getting his MBA at Wharton.</p>
-                        <a href="https://www.linkedin.com/in/healy-brendan/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="mailto:brendan@kippystudios.com" class="founder-email">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="founders" style="margin-top: 24px;">
-
-            <div class="founder-card">
-                <div class="founder-info">
-                    <h2>Drew Semler</h2>
-                    <p class="founder-title">Head of Story</p>
-                    <div class="founder-bio">
-                        <p>Drew is a screenwriter and story developer with experience across entertainment and advertising. He brings an understanding of character, comedy, audience, and brand storytelling to Kippy Studios.</p>
-                        <p>Drew wrote THE BATHROOM and Paper Penguin.</p>
-                        <p>He holds a BA from Stanford University and an MFA in Screenwriting from NYU.</p>
-                        <a href="https://www.linkedin.com/in/drew-semler-39799513a/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="founder-card">
-                <div class="founder-info">
-                    <h2>Yimin Zhang</h2>
-                    <p class="founder-title">Chief Technology Officer</p>
-                    <div class="founder-bio">
-                        <p>Yimin is an innovative engineering leader working at the intersection of software architecture, emerging technologies, and scalable systems.</p>
-                        <p>He develops creative content pipelines and leads the technical vision for complex automated workflows.</p>
-                        <p>Yimin holds a BA in animation and digital arts from the University of Southern California.</p>
-                        <a href="https://www.linkedin.com/in/yiminzhangusc/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="founders founders-single" style="margin-top: 24px;">
-
-            <div class="founder-card">
-                <div class="founder-info">
-                    <h2>Monica Vu</h2>
-                    <p class="founder-title">Head of Marketing</p>
-                    <div class="founder-bio">
-                        <p>Monica is a strategic marketing leader working at the intersection of brand storytelling, digital growth, and creative campaigns.</p>
-                        <p>She leads go-to-market strategy and helps scale audience engagement across global markets.</p>
-                        <p>Monica holds a BS in product design from Stanford and an MBA from The Wharton School.</p>
-                        <a href="https://www.linkedin.com/in/vumonica/" target="_blank" rel="noopener noreferrer" class="founder-linkedin">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+      </section>
     </main>
-
     <footer>
-        <div class="social-links-3d" id="social-links-3d">
-            <div class="social-icon-container" data-link="https://www.youtube.com/@CobyPal/featured" data-model="socials/YouTube.glb" title="YouTube"></div>
-            <div class="social-icon-container" data-link="https://www.instagram.com/cobypal/" data-model="socials/IG.glb" title="Instagram"></div>
-            <div class="social-icon-container" data-link="https://www.tiktok.com/@cobypal" data-model="socials/TikTok.glb" title="TikTok"></div>
-            <div class="social-icon-container" data-link="https://x.com/kippystudios" data-model="socials/X.glb" title="X"></div>
-            <div class="social-icon-container" data-link="https://www.threads.com/@kippystudios" data-model="socials/Threads.glb" title="Threads"></div>
-            <div class="social-icon-container" data-link="https://www.linkedin.com/company/kippystudios/?viewAsMember=true" data-model="socials/LinkedIn.glb" title="LinkedIn"></div>
-            <div class="social-icon-container" data-link="https://facebook.com/kippystudiosofficial" data-model="socials/Facebook.glb" title="Facebook"></div>
-        </div>
-        <p class="copyright">&copy; 2026 Kippy Studios. All rights reserved.</p>
+      <div class="footer-top">
+        <a class="footer-brand" href="index.html"
+          ><img
+            src="assets/gold-singleline-640.webp"
+            srcset="
+              assets/gold-singleline-640.webp  640w,
+              assets/gold-singleline.webp     1280w
+            "
+            sizes="(max-width: 700px) 60vw, 310px"
+            alt="Kippy Studios"
+            width="310"
+            height="32"
+        /></a>
+        <p>Character-driven.<br />Social-first.</p>
+      </div>
+      <nav class="socials" aria-label="Find Kippy Studios">
+        <a
+          href="https://www.youtube.com/@CobyPal/featured"
+          target="_blank"
+          rel="noopener noreferrer"
+          >YouTube <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.instagram.com/cobypal/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.tiktok.com/@cobypal"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TikTok <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://x.com/kippystudios"
+          target="_blank"
+          rel="noopener noreferrer"
+          >X <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.threads.com/@kippystudios"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Threads <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.linkedin.com/company/kippystudios/?viewAsMember=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://facebook.com/kippystudiosofficial"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Facebook <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <div class="footer-bottom">
+        <p>© 2026 Kippy Studios. All rights reserved.</p>
+        <a href="mailto:coby@kippystudios.com">Get in touch ↗</a>
+      </div>
     </footer>
-
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-        }
-    }
-    </script>
-
-    <script type="module">
-        import { initSocialIcons } from './social-icons.js';
-        initSocialIcons();
-    </script>
-</body>
+  </body>
 </html>

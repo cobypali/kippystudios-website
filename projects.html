@@ -1,208 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects – Kippy Studios</title>
-    <meta name="description" content="Projects from Kippy Studios.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            padding: 100px 50px 48px;
-            max-width: 1180px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .page-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: #E6EDF7;
-            margin-bottom: 32px;
-            max-width: 1080px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1080px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: #121A2B;
-            border-radius: 16px;
-            border: 1px solid #1A2438;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-media {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-media iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-
-        .project-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-
-        .coming-soon-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #7DD3FC;
-            font-family: 'Inter', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 4px 8px;
-            border-radius: 6px;
-            border: 1px solid rgba(125, 211, 252, 0.3);
-        }
-
-        .project-info {
-            padding: 16px 20px 20px;
-        }
-
-        .project-card h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #E6EDF7;
-            margin: 0;
-        }
-
-        @media (max-width: 900px) {
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            main {
-                padding: 80px 20px 40px;
-            }
-
-            .page-title {
-                font-size: 26px;
-                margin-bottom: 24px;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="index.html" class="logo"><img src="kippy-studios-logo.png" alt="Kippy Studios" class="nav-logo-img"></a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
-        </div>
-    </nav>
-
-    <main>
-        <p class="page-title">Projects</p>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <div class="project-media">
-                    <iframe
-                        src="https://www.youtube.com/embed/CnhX6bjEPXk"
-                        title="The Bathroom"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="project-info"><h2>THE BATHROOM</h2></div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-media">
-                    <iframe
-                        src="https://www.youtube.com/embed/PSyKONIfqiM"
-                        title="The Fridge"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="project-info"><h2>THE FRIDGE</h2></div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-media">
-                    <iframe
-                        src="https://www.youtube.com/embed/SQJE7rkXqWk"
-                        title="Ron Roach"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="project-info"><h2>RON ROACH</h2></div>
-            </div>
-
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#061333" />
+    <meta
+      name="description"
+      content="Watch The Bathroom, The Fridge, and Ron Roach — Kippy Studios originals."
+    />
+    <title>Our Originals — Kippy Studios</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Kippy Studios home"
+        ><img
+          class="brand-icon"
+          src="assets/humster-128.webp"
+          alt=""
+          width="48"
+          height="48" /><img
+          class="brand-wordmark"
+          src="assets/gold-singleline-640.webp"
+          srcset="
+            assets/gold-singleline-640.webp  640w,
+            assets/gold-singleline.webp     1280w
+          "
+          sizes="(max-width: 700px) 60vw, 310px"
+          alt="Kippy Studios"
+          width="215"
+          height="22"
+      /></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a
+        ><a href="projects.html" aria-current="page">Our work</a
+        ><a href="about.html">Studio</a><a href="team.html">Team</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="page-intro">
+        <p class="eyebrow">KIPPY STUDIOS ORIGINALS</p>
+        <h1 class="gold-text">OUR WORLDS</h1>
+        <p>Character-driven stories, with a life of their own.</p>
+      </section>
+      <section class="section projects-list" aria-label="Original films">
+        <article class="project-feature">
+          <div class="project-title">
+            <span class="eyebrow">01 / Original Animated Series</span>
+            <h2 class="gold-text">THE BATHROOM</h2>
+            <a
+              class="text-link"
+              href="https://www.instagram.com/cobypal/reel/DZ8rlPfOWQp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch episode one ↗</a
+            >
+          </div>
+          <div
+            class="video-shell"
+            data-video="CnhX6bjEPXk"
+            data-title="THE BATHROOM"
+          >
+            <button
+              class="video-poster"
+              type="button"
+              aria-label="Play THE BATHROOM"
+            >
+              <img
+                src="assets/film-0.webp"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+              /><span class="video-play"
+                ><span aria-hidden="true">▶</span> PLAY FILM</span
+              >
+            </button>
+          </div>
+          <noscript
+            ><p>
+              <a href="https://www.youtube.com/watch?v=CnhX6bjEPXk"
+                >Watch THE BATHROOM on YouTube ↗</a
+              >
+            </p></noscript
+          >
+        </article>
+        <article class="project-feature">
+          <div class="project-title">
+            <span class="eyebrow">02 / Animated Short</span>
+            <h2 class="gold-text">THE FRIDGE</h2>
+            <a
+              class="text-link"
+              href="https://www.youtube.com/watch?v=PSyKONIfqiM"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch on YouTube ↗</a
+            >
+          </div>
+          <div
+            class="video-shell"
+            data-video="PSyKONIfqiM"
+            data-title="THE FRIDGE"
+          >
+            <button
+              class="video-poster"
+              type="button"
+              aria-label="Play THE FRIDGE"
+            >
+              <img
+                src="assets/film-1.webp"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+              /><span class="video-play"
+                ><span aria-hidden="true">▶</span> PLAY FILM</span
+              >
+            </button>
+          </div>
+          <noscript
+            ><p>
+              <a href="https://www.youtube.com/watch?v=PSyKONIfqiM"
+                >Watch THE FRIDGE on YouTube ↗</a
+              >
+            </p></noscript
+          >
+        </article>
+        <article class="project-feature">
+          <div class="project-title">
+            <span class="eyebrow">03 / Animated Short</span>
+            <h2 class="gold-text">RON ROACH</h2>
+            <a
+              class="text-link"
+              href="https://www.youtube.com/watch?v=SQJE7rkXqWk"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch on YouTube ↗</a
+            >
+          </div>
+          <div
+            class="video-shell"
+            data-video="SQJE7rkXqWk"
+            data-title="RON ROACH"
+          >
+            <button
+              class="video-poster"
+              type="button"
+              aria-label="Play RON ROACH"
+            >
+              <img
+                src="assets/film-2.webp"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+              /><span class="video-play"
+                ><span aria-hidden="true">▶</span> PLAY FILM</span
+              >
+            </button>
+          </div>
+          <noscript
+            ><p>
+              <a href="https://www.youtube.com/watch?v=SQJE7rkXqWk"
+                >Watch RON ROACH on YouTube ↗</a
+              >
+            </p></noscript
+          >
+        </article>
+      </section>
     </main>
-
     <footer>
-        <div class="social-links-3d" id="social-links-3d">
-            <div class="social-icon-container" data-link="https://www.youtube.com/@CobyPal/featured" data-model="socials/YouTube.glb" title="YouTube"></div>
-            <div class="social-icon-container" data-link="https://www.instagram.com/cobypal/" data-model="socials/IG.glb" title="Instagram"></div>
-            <div class="social-icon-container" data-link="https://www.tiktok.com/@cobypal" data-model="socials/TikTok.glb" title="TikTok"></div>
-            <div class="social-icon-container" data-link="https://x.com/kippystudios" data-model="socials/X.glb" title="X"></div>
-            <div class="social-icon-container" data-link="https://www.threads.com/@kippystudios" data-model="socials/Threads.glb" title="Threads"></div>
-            <div class="social-icon-container" data-link="https://www.linkedin.com/company/kippystudios/?viewAsMember=true" data-model="socials/LinkedIn.glb" title="LinkedIn"></div>
-            <div class="social-icon-container" data-link="https://facebook.com/kippystudiosofficial" data-model="socials/Facebook.glb" title="Facebook"></div>
-        </div>
-        <p class="copyright">&copy; 2026 Kippy Studios. All rights reserved.</p>
+      <div class="footer-top">
+        <a class="footer-brand" href="index.html"
+          ><img
+            src="assets/gold-singleline-640.webp"
+            srcset="
+              assets/gold-singleline-640.webp  640w,
+              assets/gold-singleline.webp     1280w
+            "
+            sizes="(max-width: 700px) 60vw, 310px"
+            alt="Kippy Studios"
+            width="310"
+            height="32"
+        /></a>
+        <p>Character-driven.<br />Social-first.</p>
+      </div>
+      <nav class="socials" aria-label="Find Kippy Studios">
+        <a
+          href="https://www.youtube.com/@CobyPal/featured"
+          target="_blank"
+          rel="noopener noreferrer"
+          >YouTube <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.instagram.com/cobypal/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.tiktok.com/@cobypal"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TikTok <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://x.com/kippystudios"
+          target="_blank"
+          rel="noopener noreferrer"
+          >X <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.threads.com/@kippystudios"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Threads <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://www.linkedin.com/company/kippystudios/?viewAsMember=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn <span aria-hidden="true">↗</span></a
+        ><a
+          href="https://facebook.com/kippystudiosofficial"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Facebook <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <div class="footer-bottom">
+        <p>© 2026 Kippy Studios. All rights reserved.</p>
+        <a href="mailto:coby@kippystudios.com">Get in touch ↗</a>
+      </div>
     </footer>
-
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-        }
-    }
-    </script>
-
-    <script type="module">
-        import { initSocialIcons } from './social-icons.js';
-        initSocialIcons();
-    </script>
-</body>
+  </body>
 </html>

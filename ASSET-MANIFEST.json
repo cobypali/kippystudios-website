@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-27",
+  "legacy_folder": "https://drive.google.com/drive/folders/1mo7R95Nz96qa0CKzCpZ8xgBOMcJ6lJ_3",
+  "legacy_assets": [
+    {
+      "path": "Header.png",
+      "bytes": 6177049,
+      "sha256": "018b2c359c8f59f487fe0e466e3ce3dfb6af60a11986fdbe6e3d4625a6f1fbc9",
+      "drive_id": "1emGjfcSjtsu4toTBFcZVbH6h13CZeZ-V",
+      "archive_status": "uploaded; destination and size verified by folder readback"
+    },
+    {
+      "path": "Header_v02.png",
+      "bytes": 4565585,
+      "sha256": "31e8c70c655d76056adecd788d3171391d3010cab460eb9bbc2aa05810b8775c",
+      "drive_id": "1XsPCcUpqS8Moq_TSxdous8UIjaVqHUwT",
+      "archive_status": "uploaded; destination and size verified by folder readback"
+    },
+    {
+      "path": "Header_v03.png",
+      "bytes": 386230,
+      "sha256": "5dce7d4b3a01c916f6ddbb36d8673f0475ff7ef7027c8b441b73f3fa4c4032de",
+      "drive_id": "1p1kqSwOD9czM0tiZ9zhKCMy4nVW1_yen",
+      "archive_status": "already present; bytes compared"
+    },
+    {
+      "path": "Icon.png",
+      "bytes": 6587737,
+      "sha256": "77dbf342bde90d7aba35806e6f35800b10c3b4b166e79b4374a42fa2685707fe",
+      "drive_id": "1gdRU8_FoTiPrA1hI1nQ4LhslBT0fe72w",
+      "archive_status": "uploaded; destination and size verified by folder readback"
+    },
+    {
+      "path": "Icon_v02.png",
+      "bytes": 3486170,
+      "sha256": "c0700483fe4ef7d3f211b094582bd6aabc3e1c197df462b3ba9470b207e0ea96",
+      "drive_id": "1LcUvzLe_0qaAqqqptE3amrS3bgxo4Uju",
+      "archive_status": "already present; bytes compared"
+    },
+    {
+      "path": "favicon.png",
+      "bytes": 3486170,
+      "sha256": "c0700483fe4ef7d3f211b094582bd6aabc3e1c197df462b3ba9470b207e0ea96",
+      "drive_id": "1LcUvzLe_0qaAqqqptE3amrS3bgxo4Uju",
+      "archive_status": "already present; bytes compared"
+    },
+    {
+      "path": "favicons/favicon_v01.png",
+      "bytes": 312680,
+      "sha256": "40da96318a185dc9a77e3cd3afa945ae8e8e340eed5dca5be32fea198b27ec12",
+      "drive_id": "1e0qX8fauJ0U56JkuLgsAwhFwkC9437Oa",
+      "archive_status": "uploaded; destination and size verified by folder readback"
+    },
+    {
+      "path": "kippy-studios-logo.png",
+      "bytes": 148344,
+      "sha256": "bf817301edee82cd83db1bb636bf82a2cb77b397b905cf7181055fe8168c24f0",
+      "drive_id": "108Z047lTez-6hW4Q0l0oBFPg8eF4KllA",
+      "archive_status": "uploaded; destination and size verified by folder readback"
+    },
+    {
+      "path": "kippy-studios-title.png",
+      "bytes": 209177,
+      "sha256": "5fd135e7c76fb8c2399b343e65fb78726a6461bcbde107e6d7a27bd1803d3ae6",
+      "drive_id": "1iMcV3CxYenSbw_-4pXM9ENuEfcCGgCbe",
+      "archive_status": "uploaded; destination and size verified by folder readback"
+    }
+  ],
+  "other_original_images": [
+    {
+      "path": "brendan-avatar.png",
+      "bytes": 1926426,
+      "sha256": "cf2a89ed4a895e33aa9ffff56be1a4383ce709621c59c81e2c9230c59527f3e6"
+    },
+    {
+      "path": "coby-avatar.png",
+      "bytes": 1984801,
+      "sha256": "7709fb0eac5f65326c057fdb6d5c90a927a2e11eaf7de1e6faecf7a14d283276"
+    },
+    {
+      "path": "founders-photo.jpg",
+      "bytes": 5413930,
+      "sha256": "87b5bd4a1cc0c9158efbbbe60bac9afa2c3778369f28ed7c74488cfe7ef50b3c"
+    },
+    {
+      "path": "love-pantry-coming-soon.png",
+      "bytes": 1774014,
+      "sha256": "d800023436f155642afaaf076dcbe985b289ee3ac5b70f07b4f84df97fdd80b0"
+    },
+    {
+      "path": "the-bathroom-coming-soon.jpg",
+      "bytes": 1025260,
+      "sha256": "6005a7f80addc7d204297388ab110456364468df6d543286fd98e75474d2c9d1"
+    },
+    {
+      "path": "the-bathroom-final.png",
+      "bytes": 1903204,
+      "sha256": "843616de5ab73dab62cd5d9b708a7cf2ac3b9604bdcaf69c71cf6a0f1e2f93fb"
+    }
+  ],
+  "new_assets": [
+    {
+      "path": "assets/characters-1600.webp",
+      "bytes": 34742,
+      "dimensions": [
+        1600,
+        667
+      ],
+      "sha256": "ba6813a8c23c6035aeed9b166fb9ce2b7fbb0173c78429dba0fb23536d8142c5"
+    },
+    {
+      "path": "assets/characters-2048.webp",
+      "bytes": 48398,
+      "dimensions": [
+        2048,
+        853
+      ],
+      "sha256": "64845c8be8a71ebb6cc7b88dc3d191f5ebbe1b322b0462266c879e7f61cad0c9"
+    },
+    {
+      "path": "assets/characters-960.webp",
+      "bytes": 17220,
+      "dimensions": [
+        960,
+        400
+      ],
+      "sha256": "0af918b510a48d239c32a5f0a463b3598d677c1950f733aa0147eaa871c78f37"
+    },
+    {
+      "path": "assets/favicon.png",
+      "bytes": 7459,
+      "dimensions": [
+        64,
+        64
+      ],
+      "sha256": "22fdf735f7e32e80fd684251e90ff985313a21da9fc2a80ee1757320b206ed14"
+    },
+    {
+      "path": "assets/film-0.webp",
+      "bytes": 76972,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "bd6a50056be9731ad2e8576462b227a4ed528351be8a7e0b8c6bf32a8fa4a82e"
+    },
+    {
+      "path": "assets/film-1.webp",
+      "bytes": 130964,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "f4d9f885fbe2bddff4a1b1f59661792a47a9be99bfc0917dd1d9e0a19bd60ffa"
+    },
+    {
+      "path": "assets/film-2.webp",
+      "bytes": 106242,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "sha256": "a5417f2fe9e3cf754773c2abe69f8716dae7d94fd1cc9f27ef93991641b7c66b"
+    },
+    {
+      "path": "assets/gold-singleline-640.webp",
+      "bytes": 16672,
+      "dimensions": [
+        640,
+        65
+      ],
+      "sha256": "fd0e45e8c92a43028d9854d9aaaaa8278baf48e5f6749bfff0d9a83833c8bd03"
+    },
+    {
+      "path": "assets/gold-singleline.webp",
+      "bytes": 37476,
+      "dimensions": [
+        1280,
+        131
+      ],
+      "sha256": "c3a9c94e975f2522369153aa502ec2e38121198b6c78194d474b6aa9b99e76fc"
+    },
+    {
+      "path": "assets/gold-twoline-800.webp",
+      "bytes": 41710,
+      "dimensions": [
+        800,
+        341
+      ],
+      "sha256": "34ffbb8a12c4e6228130fefd2f3fb882985c75e1b7edd6bee1dedb6ed294a79b"
+    },
+    {
+      "path": "assets/gold-twoline.webp",
+      "bytes": 103272,
+      "dimensions": [
+        1600,
+        682
+      ],
+      "sha256": "2254573f41ac872dc0c169eee2824cad267a34975d436b071f6f6a5a475c8757"
+    },
+    {
+      "path": "assets/humster-1000.webp",
+      "bytes": 119042,
+      "dimensions": [
+        795,
+        1000
+      ],
+      "sha256": "baa18b69c26e40a8c726b272bebfaeb45bea890543260c3ac4188c320ed10466"
+    },
+    {
+      "path": "assets/humster-128.webp",
+      "bytes": 4356,
+      "dimensions": [
+        102,
+        128
+      ],
+      "sha256": "be00ea5ef6f7e8ec4d89bd857ee797c495206d46a7257a9e774488bcb4ce4018"
+    },
+    {
+      "path": "assets/humster-320.webp",
+      "bytes": 16256,
+      "dimensions": [
+        254,
+        320
+      ],
+      "sha256": "35570996056160cb451eee6f51fd596ad0105bd8d32232d9564f3580bd74db82"
+    },
+    {
+      "path": "assets/humster-640.webp",
+      "bytes": 53354,
+      "dimensions": [
+        509,
+        640
+      ],
+      "sha256": "e331da95c077a048bd674d91a907b8e387641889d49599423e4d73c56ecaa0f2"
+    }
+  ],
+  "brand_sources": [
+    {
+      "path": "/Users/cobypal/Desktop/KIPPY STUDIOS/Brand/v09 Facecap Humster v02/Humster_Facecap_Final_v09_Front_5120_16bit.png",
+      "sha256": "cd9bd637a631b64462a0cc11e70cbd27819b0e115166da03550790ef3782300e"
+    },
+    {
+      "path": "/Users/cobypal/Desktop/KIPPY STUDIOS/Brand/v09 Facecap Humster v02/Gold Lettering Overlays/Solid Gold Final/Kippy_Studios_Solid_Gold_Straight_SingleLine_Final.png",
+      "sha256": "dcac75051043bf3741440f41f8e1154683fd05c2ac6aef2372deb139822e3542",
+      "modified_utc": "2026-10-27T19:08:07.260203+00:00",
+      "dimensions": [
+        8192,
+        1536
+      ],
+      "alpha_crop_bounds": [
+        408,
+        391,
+        7784,
+        1145
+      ]
+    },
+    {
+      "path": "/Users/cobypal/Desktop/KIPPY STUDIOS/Brand/v09 Facecap Humster v02/Gold Lettering Overlays/Solid Gold Final/Kippy_Studios_Solid_Gold_Straight_TwoLine_Final.png",
+      "sha256": "312c71585a852b985aa10c42f720a2bd20c3b447e2e6a72d6174146b1690af49",
+      "modified_utc": "2026-10-27T19:09:58.641330+00:00",
+      "dimensions": [
+        5120,
+        2560
+      ],
+      "alpha_crop_bounds": [
+        255,
+        297,
+        4865,
+        2263
+      ]
+    }
+  ],
+  "character_cover_source": "https://drive.google.com/file/d/1q56-YnGQxlOrUyIZs0e0ri_fjF1Q_Ta8/view (Without John / Upload Ready / Website_Hero.jpg)",
+  "lettering_status": "Final physically rendered 3D solid-gold source PNGs integrated; Arial Bold approximation, not exact recovered coin font."
+}
