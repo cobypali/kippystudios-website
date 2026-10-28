@@ -1,0 +1,92 @@
+{
+  "recorded_direction_utc": "2026-10-28T00:45:00Z",
+  "release_status": "User authorized publication 2026-10-28T15:42:00Z; publishing static ringless Humster, Y fix, final volumetric With John and decorative arrow removal. Turnaround remains paused.",
+  "turnaround": {
+    "approval": "paused",
+    "exact_final_paths": [],
+    "activation_attribute": {
+      "name": "data-turnaround-approval",
+      "pending": "pending",
+      "enabled_only_after_approval": "approved-final",
+      "paused": "paused"
+    },
+    "hero_backdrop": "Remove decorative circle behind the static hero now; preserve the isolated character, page background, approved coin/logo, and other still icons.",
+    "requirements": [
+      "Lightweight transparent approved furry Humster turnaround",
+      "Matching approved transparent poster",
+      "Autoplay muted loop playsinline",
+      "Accessible pause/play",
+      "Reduced-motion still with zero video loading",
+      "Offscreen and background pause",
+      "Transparent poster if alpha unsupported; no mismatched opaque rectangle",
+      "Stable layout and whole-body containment",
+      "Adaptive desktop/mobile encoding and actual alpha/playback verification"
+    ],
+    "explicitly_not_final": [
+      "Rejected earlier turnaround",
+      "Unapproved full-head v12 review video"
+    ],
+    "status": "paused-by-user",
+    "resume_requires_user_instruction": true,
+    "current_behavior": "Keep the approved static Humster without the circular backdrop. Video remains paused and unconfigured.",
+    "staged_work": "Preserved dormant for a later user-requested resumption."
+  },
+  "ensemble": {
+    "approval": "final supplied by parent",
+    "exact_final_native_path": "/Users/cobypal/Documents/Codex/2026-10-27/task/design-work/volumetric-cover/With-John-Volumetric-v08-8K.jpg",
+    "required_version": "Final volumetric-lit With John ensemble",
+    "composition": "Full native 16:9 With John ensemble; no crop; optimized responsive derivatives",
+    "requirements": [
+      "Inspect approved native master before choosing crop",
+      "Preserve full cast and John",
+      "Responsive derivatives sufficient for retina display",
+      "Do not blindly reuse the prior source/crop"
+    ],
+    "status": "approved-for-publication",
+    "review_assets_allowed": false,
+    "latest_review_note": "Final native 8K master supplied and integrated; responsive source is not the prior review-resolution image.",
+    "source_library_id": "libfile_b4ab3ee9c9308191a7884f12f5b70162"
+  },
+  "independent_fixes": {
+    "clipped_Y": "Prepared locally and retained; separate pending website item, not canceled.",
+    "approval_gate": "Review/rejected URLs do not load while status is pending.",
+    "static_ring_removal": "Prepared locally per latest 00:52 clarification, independent of paused turnaround; no change to the character asset."
+  },
+  "unchanged_public_copy": "Premium animation for original stories and branded collaborations.",
+  "latest_user_direction_utc": "2026-10-28T15:42:00Z",
+  "direction_history": [
+    {
+      "utc": "2026-10-28T00:45:00Z",
+      "direction": "Prepare approved final ringless turnaround and volumetric With John ensemble when assets are approved."
+    },
+    {
+      "utc": "2026-10-28T00:51:00Z",
+      "direction": "Pause turnaround for later. Keep static Humster and circle. Preserve staged integration; Y and volumetric ensemble remain pending."
+    },
+    {
+      "utc": "2026-10-28T00:52:00Z",
+      "direction": "Remove the circular background behind the static Humster in the local website changes. Turnaround remains paused; no publication."
+    },
+    {
+      "utc": "2026-10-28T00:54:00Z",
+      "direction": "Replace the current website character cover with the approved full-resolution volumetric-lit With John ensemble once the parent supplies its final master."
+    },
+    {
+      "utc": "2026-10-28T15:42:00Z",
+      "direction": "Publish prepared website update; keep turnaround paused."
+    }
+  ],
+  "decorative_icon": {
+    "identified_from": "libfile_4b692280df348191a19e215eed002c8b",
+    "visual_inspection": "Exact 27x25 screenshot shows gold northeast arrow \u2197",
+    "removed_occurrences": 46,
+    "contexts": [
+      "Hero actions",
+      "Project thumbnail overlays",
+      "Project/watch links",
+      "Team contacts",
+      "Shared footer contact and social links"
+    ]
+  },
+  "previous_published_commit": "da3a583f5123f98989dd305b12018287a06f006d"
+}

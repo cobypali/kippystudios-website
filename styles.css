@@ -168,10 +168,13 @@ summary:focus-visible,
   text-align: center;
   margin: 0 0 32px;
 }
+/* Negative tracking lets the final Y overhang its text advance.
+   Pad the painted background so its filled face and extrusion are complete. */
 .brand-title .gold-text {
   display: table;
   margin: 0 auto;
-  padding-bottom: 7px;
+  padding: 0 0.08em 7px;
+  overflow: visible;
 }
 .brand-title .gold-text + .gold-text {
   margin-top: 6px;
@@ -191,8 +194,7 @@ summary:focus-visible,
 .button {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 38px;
+  justify-content: center;
   padding: 14px 24px;
   font-weight: 700;
   font-size: 13px;
@@ -230,32 +232,6 @@ summary:focus-visible,
   align-items: center;
   position: relative;
   min-height: 450px;
-}
-.halo {
-  position: absolute;
-  width: 100%;
-  max-width: 470px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    #1a459b 0,
-    #133985 45%,
-    #02122f 65%,
-    #03112d 68%,
-    #f6d98a 68.6%,
-    #966426 69.2%,
-    #fff0bb 69.5%,
-    #44331a 70%,
-    transparent 70.2%
-  );
-}
-.halo:after {
-  content: "";
-  position: absolute;
-  inset: 6%;
-  border: 1px solid #ecc9793b;
-  border-radius: 50%;
 }
 .hero-humster {
   position: relative;
@@ -322,19 +298,6 @@ summary:focus-visible,
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.play {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  background: #08142de6;
-  border: 1px solid #efd18e77;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  color: #fbe3a1;
 }
 .film-meta {
   padding-top: 18px;
@@ -555,9 +518,6 @@ footer {
   gap: 10px;
   color: #c8d3e7;
 }
-.socials a span {
-  color: #b89c63;
-}
 .copyright {
   font-size: 10px;
   color: #a2afc5;
@@ -689,7 +649,6 @@ footer {
   }
   .button {
     padding: 12px 21px;
-    gap: 27px;
   }
   .humster-stage {
     min-height: 340px;
@@ -698,10 +657,6 @@ footer {
   .hero-humster {
     max-height: 340px;
     max-width: 85%;
-  }
-  .halo {
-    width: 96%;
-    max-width: 335px;
   }
   .ensemble-viewport {
     height: 320px;
@@ -840,4 +795,59 @@ footer {
 .brand-name,
 .footer-brand {
   filter: drop-shadow(0 1px 0 #7a4a1a) drop-shadow(0 2px 0 #40210f);
+}
+
+/* Stable hero media box. Source URLs are added only after the approved loop is ready. */
+.humster-media {
+  position: relative;
+  width: min(88%, 366px);
+  aspect-ratio: 795 / 1000;
+}
+.humster-media .hero-humster,
+.humster-media .hero-turnaround {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+.humster-media .hero-turnaround {
+  position: absolute;
+  inset: 0;
+}
+.humster-motion-toggle {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  min-height: 44px;
+  padding: 7px 12px;
+  background: #061333;
+  color: #f0d697;
+  border: 1px solid #b5995e;
+  font-size: 11px;
+  cursor: pointer;
+}
+[hidden] {
+  display: none !important;
+}
+@media (min-width: 1600px) {
+  .humster-media {
+    width: min(88%, 390px);
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .humster-media {
+    width: min(88%, 310px);
+  }
+}
+@media (max-width: 700px) {
+  .humster-media {
+    width: min(85%, 270px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-turnaround,
+  .humster-motion-toggle {
+    display: none !important;
+  }
 }

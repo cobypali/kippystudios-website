@@ -102,181 +102,121 @@
     {
       "path": "assets/characters-1600.webp",
       "bytes": 34742,
-      "dimensions": [
-        1600,
-        667
-      ],
+      "dimensions": [1600, 667],
       "sha256": "ba6813a8c23c6035aeed9b166fb9ce2b7fbb0173c78429dba0fb23536d8142c5"
     },
     {
       "path": "assets/characters-2048.webp",
       "bytes": 48398,
-      "dimensions": [
-        2048,
-        853
-      ],
+      "dimensions": [2048, 853],
       "sha256": "64845c8be8a71ebb6cc7b88dc3d191f5ebbe1b322b0462266c879e7f61cad0c9"
     },
     {
       "path": "assets/characters-960.webp",
       "bytes": 17220,
-      "dimensions": [
-        960,
-        400
-      ],
+      "dimensions": [960, 400],
       "sha256": "0af918b510a48d239c32a5f0a463b3598d677c1950f733aa0147eaa871c78f37"
     },
     {
       "path": "assets/ensemble-with-john-1280.webp",
       "bytes": 117194,
-      "dimensions": [
-        1280,
-        460
-      ],
+      "dimensions": [1280, 460],
       "sha256": "802c47d3229dc5bdb37fa9e1fe6d87dce250db44689c76135926dfbfd67be070"
     },
     {
       "path": "assets/ensemble-with-john-2560.webp",
       "bytes": 349608,
-      "dimensions": [
-        2560,
-        919
-      ],
+      "dimensions": [2560, 919],
       "sha256": "6aba60dda8f9f8aa12b09519a18140ee73ec029d193df9c92205e9e551c89a61"
     },
     {
       "path": "assets/ensemble-with-john-3840.webp",
       "bytes": 667542,
-      "dimensions": [
-        3840,
-        1379
-      ],
+      "dimensions": [3840, 1379],
       "sha256": "556a82250e5662e31c1c469f26149fb6dc96a7e7b3fedc0010be78cff327288a"
     },
     {
       "path": "assets/ensemble-with-john-5120.webp",
       "bytes": 1012066,
-      "dimensions": [
-        5120,
-        1839
-      ],
+      "dimensions": [5120, 1839],
       "sha256": "16c76d14e150e1812e4f13de0fc99869c353b327549f4793380e5ba15b06063c"
     },
     {
       "path": "assets/ensemble-with-john-7200.webp",
       "bytes": 1697036,
-      "dimensions": [
-        7200,
-        2586
-      ],
+      "dimensions": [7200, 2586],
       "sha256": "81895fda214a47eda89ea6f916211c148b27bc7ef7dbda74e3ba58b2ef2a7991"
     },
     {
       "path": "assets/favicon.png",
       "bytes": 7459,
-      "dimensions": [
-        64,
-        64
-      ],
+      "dimensions": [64, 64],
       "sha256": "22fdf735f7e32e80fd684251e90ff985313a21da9fc2a80ee1757320b206ed14"
     },
     {
       "path": "assets/film-0.webp",
       "bytes": 76972,
-      "dimensions": [
-        1280,
-        720
-      ],
+      "dimensions": [1280, 720],
       "sha256": "bd6a50056be9731ad2e8576462b227a4ed528351be8a7e0b8c6bf32a8fa4a82e"
     },
     {
       "path": "assets/film-1.webp",
       "bytes": 130964,
-      "dimensions": [
-        1280,
-        720
-      ],
+      "dimensions": [1280, 720],
       "sha256": "f4d9f885fbe2bddff4a1b1f59661792a47a9be99bfc0917dd1d9e0a19bd60ffa"
     },
     {
       "path": "assets/film-2.webp",
       "bytes": 106242,
-      "dimensions": [
-        1280,
-        720
-      ],
+      "dimensions": [1280, 720],
       "sha256": "a5417f2fe9e3cf754773c2abe69f8716dae7d94fd1cc9f27ef93991641b7c66b"
     },
     {
       "path": "assets/gold-singleline-640.webp",
       "bytes": 16672,
-      "dimensions": [
-        640,
-        65
-      ],
+      "dimensions": [640, 65],
       "sha256": "fd0e45e8c92a43028d9854d9aaaaa8278baf48e5f6749bfff0d9a83833c8bd03"
     },
     {
       "path": "assets/gold-singleline.webp",
       "bytes": 37476,
-      "dimensions": [
-        1280,
-        131
-      ],
+      "dimensions": [1280, 131],
       "sha256": "c3a9c94e975f2522369153aa502ec2e38121198b6c78194d474b6aa9b99e76fc"
     },
     {
       "path": "assets/gold-twoline-800.webp",
       "bytes": 41710,
-      "dimensions": [
-        800,
-        341
-      ],
+      "dimensions": [800, 341],
       "sha256": "34ffbb8a12c4e6228130fefd2f3fb882985c75e1b7edd6bee1dedb6ed294a79b"
     },
     {
       "path": "assets/gold-twoline.webp",
       "bytes": 103272,
-      "dimensions": [
-        1600,
-        682
-      ],
+      "dimensions": [1600, 682],
       "sha256": "2254573f41ac872dc0c169eee2824cad267a34975d436b071f6f6a5a475c8757"
     },
     {
       "path": "assets/humster-1000.webp",
       "bytes": 119042,
-      "dimensions": [
-        795,
-        1000
-      ],
+      "dimensions": [795, 1000],
       "sha256": "baa18b69c26e40a8c726b272bebfaeb45bea890543260c3ac4188c320ed10466"
     },
     {
       "path": "assets/humster-128.webp",
       "bytes": 4356,
-      "dimensions": [
-        102,
-        128
-      ],
+      "dimensions": [102, 128],
       "sha256": "be00ea5ef6f7e8ec4d89bd857ee797c495206d46a7257a9e774488bcb4ce4018"
     },
     {
       "path": "assets/humster-320.webp",
       "bytes": 16256,
-      "dimensions": [
-        254,
-        320
-      ],
+      "dimensions": [254, 320],
       "sha256": "35570996056160cb451eee6f51fd596ad0105bd8d32232d9564f3580bd74db82"
     },
     {
       "path": "assets/humster-640.webp",
       "bytes": 53354,
-      "dimensions": [
-        509,
-        640
-      ],
+      "dimensions": [509, 640],
       "sha256": "e331da95c077a048bd674d91a907b8e387641889d49599423e4d73c56ecaa0f2"
     }
   ],
@@ -289,54 +229,70 @@
       "path": "/Users/cobypal/Desktop/KIPPY STUDIOS/Brand/v09 Facecap Humster v02/Gold Lettering Overlays/Solid Gold Final/Kippy_Studios_Solid_Gold_Straight_SingleLine_Final.png",
       "sha256": "dcac75051043bf3741440f41f8e1154683fd05c2ac6aef2372deb139822e3542",
       "modified_utc": "2026-10-27T19:08:07.260203+00:00",
-      "dimensions": [
-        8192,
-        1536
-      ],
-      "alpha_crop_bounds": [
-        408,
-        391,
-        7784,
-        1145
-      ]
+      "dimensions": [8192, 1536],
+      "alpha_crop_bounds": [408, 391, 7784, 1145]
     },
     {
       "path": "/Users/cobypal/Desktop/KIPPY STUDIOS/Brand/v09 Facecap Humster v02/Gold Lettering Overlays/Solid Gold Final/Kippy_Studios_Solid_Gold_Straight_TwoLine_Final.png",
       "sha256": "312c71585a852b985aa10c42f720a2bd20c3b447e2e6a72d6174146b1690af49",
       "modified_utc": "2026-10-27T19:09:58.641330+00:00",
-      "dimensions": [
-        5120,
-        2560
-      ],
-      "alpha_crop_bounds": [
-        255,
-        297,
-        4865,
-        2263
-      ]
+      "dimensions": [5120, 2560],
+      "alpha_crop_bounds": [255, 297, 4865, 2263]
     }
   ],
   "character_cover_source": {
-    "drive_url": "https://drive.google.com/file/d/1pBEn4sZZvkOkXTuNlcbM9y7Lc-mPOxJ2/view",
-    "filename": "Foo_Ensemble_WithJohn_8K.png",
-    "source_dimensions": [
-      7680,
-      4320
-    ],
-    "source_sha256": "75c5937b1b0ace5c5dd4347761525817a950ff0d49f95a3e38b08647303ddb7e",
-    "website_crop": [
-      240,
-      1250,
-      7480,
-      3850
-    ],
-    "responsive_widths": [
-      1280,
-      2560,
-      3840,
-      5120,
-      7200
+    "library_file_id": "libfile_b4ab3ee9c9308191a7884f12f5b70162",
+    "filename": "With-John-Volumetric-v08-8K.jpg",
+    "source_dimensions": [7680, 4320],
+    "source_sha256": "5c5290521e798af20e97630df85271599c5a9495d7f41bcf1d7a433148d1e7b5",
+    "website_crop": null,
+    "composition": "Full native 16:9; all cast, John, volumetric beams and floor preserved",
+    "responsive_assets": [
+      {
+        "path": "assets/ensemble-with-john-volumetric-v08-1280.webp",
+        "dimensions": [1280, 720],
+        "bytes": 113474,
+        "sha256": "d788fadcde2bfd5b4d157ae1d289da08f4001c48a562471a41d2bb816b160c95"
+      },
+      {
+        "path": "assets/ensemble-with-john-volumetric-v08-1920.webp",
+        "dimensions": [1920, 1080],
+        "bytes": 209632,
+        "sha256": "7cb1a19654fa4eb50e8d582ef8228894f9727b520a27a8230bee24844123f4a9"
+      },
+      {
+        "path": "assets/ensemble-with-john-volumetric-v08-2560.webp",
+        "dimensions": [2560, 1440],
+        "bytes": 339870,
+        "sha256": "199af1ba1f0d448eb3f4aa79a7bab3bf69cd24c8245cc5401c3542381bb50d7d"
+      },
+      {
+        "path": "assets/ensemble-with-john-volumetric-v08-3840.webp",
+        "dimensions": [3840, 2160],
+        "bytes": 645710,
+        "sha256": "84675551d34e50bac2cd126b1876bbf26aed045bef3769449e22a98bb47655f0"
+      },
+      {
+        "path": "assets/ensemble-with-john-volumetric-v08-5760.webp",
+        "dimensions": [5760, 3240],
+        "bytes": 1135302,
+        "sha256": "a66570a3fb0864051a4342a8fd3c10c74237fea83ecadb08d9701758aec0b5fa"
+      },
+      {
+        "path": "assets/ensemble-with-john-volumetric-v08-7680.webp",
+        "dimensions": [7680, 4320],
+        "bytes": 1767338,
+        "sha256": "c58df264433214eff4a9fe34b1937558ed689f8c3467022604e837f07637f87f"
+      }
     ]
   },
-  "lettering_status": "Website brand title now uses the exact static filled metallic gradient treatment selected by the user in libfile_2bafe218a4d8819187f284532fe5229d. Pale PNG title overlays are preserved but no longer used. Approved Humster/coin artwork unchanged."
+  "lettering_status": "Website brand title now uses the exact static filled metallic gradient treatment selected by the user in libfile_2bafe218a4d8819187f284532fe5229d. Pale PNG title overlays are preserved but no longer used. Approved Humster/coin artwork unchanged.",
+  "previous_character_cover_source": {
+    "drive_url": "https://drive.google.com/file/d/1pBEn4sZZvkOkXTuNlcbM9y7Lc-mPOxJ2/view",
+    "filename": "Foo_Ensemble_WithJohn_8K.png",
+    "source_dimensions": [7680, 4320],
+    "source_sha256": "75c5937b1b0ace5c5dd4347761525817a950ff0d49f95a3e38b08647303ddb7e",
+    "website_crop": [240, 1250, 7480, 3850],
+    "responsive_widths": [1280, 2560, 3840, 5120, 7200]
+  }
 }
