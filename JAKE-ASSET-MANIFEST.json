@@ -33,6 +33,22 @@
         1925
       ],
       "library_file_id": "libfile_fde3_f-a0b84d55f00c8191b7f2864d33f64f1a_1280aa5fdfc08191a61f6d178e18c0a8"
+    },
+    {
+      "file": "Kippy_WithJohn_BlueStudio_v04_0000.png",
+      "library_file_id": "libfile_fde3_f-cb8e82e58f28819180ad6fd2e2216fb2_1280aa5fdfc08191a61f6d178e18c0a8",
+      "sha256": "69f0747c09cab8634afe21e05432c0a582422a1da94d48361bf86377eb63ae38",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "website_crop": [
+        0,
+        560,
+        3840,
+        1930
+      ],
+      "preserved": "All characters, heads, feet, poses, faces, and contact-shadow grounding. Full-frame source retained separately."
     }
   ],
   "derivatives": [
@@ -130,6 +146,38 @@
       "dimensions": [
         388,
         1000
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v04-tight-3840.webp",
+      "bytes": 259856,
+      "dimensions": [
+        3840,
+        1370
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v04-tight-1920.webp",
+      "bytes": 110592,
+      "dimensions": [
+        1920,
+        685
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v04-tight-1280.webp",
+      "bytes": 64564,
+      "dimensions": [
+        1280,
+        457
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v04-tight-2560.webp",
+      "bytes": 158256,
+      "dimensions": [
+        2560,
+        913
       ]
     }
   ]

@@ -70,3 +70,8 @@ The old Humster source artwork remains in the repository for history, but the ol
 The existing GitHub Pages release workflow is unchanged. No dependencies, account permissions, hosting, domain, or credential configuration changes are needed.
 
 Validation for this revision: all three pages at 320/390/768/1440px passed no-overflow, no-broken-image and no-page-error checks; navigation, legacy redirect, exact team names/roles, biography expansion and video activation passed. Six axe WCAG A/AA scans reported zero violations. Desktop/mobile screenshots were visually inspected. Gold text retains zero active animations/transitions; pixel hashes can differ under browser rasterization. New responsive image variants total about 1.2 MB across all sizes, not per page load. Coby explicitly approved publishing this redesign after being asked whether to publish it to kippystudios.com.
+
+
+## Blue floor and tighter group framing — November 11, 2026
+
+Coby requested a blue floor matching the backdrop and a tighter vertical crop with all heads and feet retained. The homepage uses native Unreal v04 With John, cropped from 3840×2160 to (0,560,3840,1930), yielding 3840×1370. Blue floor and softened backdrop transition are rendered into the source, not applied as a website tint. Full-frame source, original v03 files and all character designs remain preserved. Responsive derivatives update the mobile image-size hint to match the wider composition; the full cast remains horizontally accessible on phones.
