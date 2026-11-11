@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
 :root {
-  --navy: #040b20;
+  --navy: #071b3c;
   --ink: #f4f1e7;
-  --muted: #b6c1d7;
+  --muted: #c4d5ec;
   --gold: #ecc979;
   --line: rgba(220, 190, 115, 0.24);
 }
@@ -74,7 +74,7 @@ summary:focus-visible,
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  background: #050f2b;
+  background: #0a2854;
 }
 .brand {
   display: flex;
@@ -82,8 +82,8 @@ summary:focus-visible,
   align-items: center;
 }
 .brand-icon {
-  width: 40px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
 }
 .brand-name {
@@ -153,9 +153,13 @@ summary:focus-visible,
   gap: 5%;
   padding: 48px 7% 55px;
   background:
-    radial-gradient(ellipse at 78% 40%, #12418d 0, transparent 49%),
-    radial-gradient(ellipse at 13% 10%, #132b63 0, transparent 56%),
-    linear-gradient(130deg, #06132e, #081d51 55%, #030a20);
+    radial-gradient(
+      ellipse at 77% 43%,
+      #4b91ce 0,
+      #2c69aa 25%,
+      transparent 61%
+    ),
+    linear-gradient(125deg, #103468 0%, #174c87 52%, #123e75 100%);
 }
 .hero-copy {
   max-width: 620px;
@@ -479,7 +483,7 @@ summary:focus-visible,
 footer {
   padding: 38px 5% 24px;
   border-top: 1px solid var(--line);
-  background: #02081a;
+  background: #05152f;
 }
 .footer-top {
   display: flex;
@@ -598,8 +602,8 @@ footer {
     gap: 10px;
   }
   .brand-icon {
-    width: 29px;
-    height: 37px;
+    width: 42px;
+    height: 42px;
   }
   .brand-name {
     font-size: 17px;
@@ -670,7 +674,7 @@ footer {
     display: block;
     text-align: center;
     color: #c3d0e4;
-    background: #061331;
+    background: #103765;
     padding: 8px 12px;
     font-size: 11px;
   }
@@ -849,5 +853,71 @@ footer {
   .hero-turnaround,
   .humster-motion-toggle {
     display: none !important;
+  }
+}
+
+/* Jake / Blue Studio identity, November 2026. Approved static assets only. */
+.jake-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 470px;
+}
+.hero-jake {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 16px #07295844);
+}
+.ensemble {
+  border: 0;
+  background: #173f76;
+}
+.work-intro,
+.team-intro {
+  background: linear-gradient(110deg, #11376c, #1f548b);
+  padding-top: 48px;
+  padding-bottom: 42px;
+}
+.film-image,
+.video-shell {
+  border-color: #e0c37b55;
+}
+@media (min-width: 1600px) {
+  .hero-jake {
+    height: 560px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .jake-stage {
+    min-height: 400px;
+  }
+  .hero-jake {
+    height: 430px;
+  }
+}
+@media (max-width: 700px) {
+  .jake-stage {
+    min-height: 0;
+    width: 100%;
+  }
+  .hero-jake {
+    height: 360px;
+  }
+  .hero {
+    gap: 18px;
+    background:
+      radial-gradient(
+        ellipse at 50% 78%,
+        #4b91ce 0,
+        #2c69aa 25%,
+        transparent 62%
+      ),
+      linear-gradient(150deg, #103468, #174c87);
+  }
+  .work-intro,
+  .team-intro {
+    padding-top: 30px;
+    padding-bottom: 28px;
   }
 }

@@ -59,3 +59,14 @@ Direct inspection of user screenshot `libfile_4b692280df348191a19e215eed002c8b` 
 ## Publication approved — 2026-10-28 15:42 UTC
 
 The user authorized publishing the prepared static ringless Humster, clipped-Y fix, all decorative northeast-arrow removals and final 8K volumetric With John responsive ensemble. Existing copy, navigation and team content remain unchanged. This approval supersedes the earlier local-only publication restrictions in this historical preparation log. Turnaround work remains paused; no media source is configured or loaded.
+
+
+## Jake / Blue Studio rebrand — November 11, 2026
+
+This revision replaces active Humster branding with the approved original Jake the cucumber artwork: the exact sapphire-and-gold ring in the navigation and icons, a static full-body Jake hero, and the approved Blue Studio v03 With John ensemble. The brighter blue gradient follows the new studio asset palette; the previously approved static metallic-gold type, exact tagline, project links, navigation and seven-person team roster remain unchanged. No social profile has been changed.
+
+The old Humster source artwork remains in the repository for history, but the old paused turnaround HTML/controller has been removed. There is no animation or video source in the hero. Responsive images do not upscale the native masters. `JAKE-ASSET-MANIFEST.json` records source provenance, checksums, native sizes and derivatives. The mobile cast strip remains horizontally scrollable and initially centered on John.
+
+The existing GitHub Pages release workflow is unchanged. No dependencies, account permissions, hosting, domain, or credential configuration changes are needed.
+
+Validation for this revision: all three pages at 320/390/768/1440px passed no-overflow, no-broken-image and no-page-error checks; navigation, legacy redirect, exact team names/roles, biography expansion and video activation passed. Six axe WCAG A/AA scans reported zero violations. Desktop/mobile screenshots were visually inspected. Gold text retains zero active animations/transitions; pixel hashes can differ under browser rasterization. New responsive image variants total about 1.2 MB across all sizes, not per page load. Coby explicitly approved publishing this redesign after being asked whether to publish it to kippystudios.com.

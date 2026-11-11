@@ -1,8 +1,8 @@
 {
   "recorded_direction_utc": "2026-10-28T00:45:00Z",
-  "release_status": "User authorized publication 2026-10-28T15:42:00Z; publishing static ringless Humster, Y fix, final volumetric With John and decorative arrow removal. Turnaround remains paused.",
+  "release_status": "Jake Blue Studio rebrand verified locally November 11, 2026; Coby explicitly approved public deployment after review.",
   "turnaround": {
-    "approval": "paused",
+    "approval": "not-active",
     "exact_final_paths": [],
     "activation_attribute": {
       "name": "data-turnaround-approval",
@@ -26,7 +26,7 @@
       "Rejected earlier turnaround",
       "Unapproved full-head v12 review video"
     ],
-    "status": "paused-by-user",
+    "status": "superseded-by-static-jake",
     "resume_requires_user_instruction": true,
     "current_behavior": "Keep the approved static Humster without the circular backdrop. Video remains paused and unconfigured.",
     "staged_work": "Preserved dormant for a later user-requested resumption."
@@ -88,5 +88,11 @@
       "Shared footer contact and social links"
     ]
   },
-  "previous_published_commit": "da3a583f5123f98989dd305b12018287a06f006d"
+  "previous_published_commit": "da3a583f5123f98989dd305b12018287a06f006d",
+  "jake_rebrand": {
+    "hero": "Approved original Jake, full-body transparent static render",
+    "palette": "Brighter Blue Studio gradient with preserved static metallic-gold title",
+    "ensemble": "Approved Blue Studio v03 With John",
+    "old_assets": "Preserved; not referenced by active pages"
+  }
 }

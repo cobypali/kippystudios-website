@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-11",
+  "sources": [
+    {
+      "file": "Kippy_WithJohn_BlueStudio_v03_0000(1).png",
+      "sha256": "84d769d1860c7907c365dedc749a6a210164eda7d8b1d65313ac1a33922c7bba",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "library_file_id": "libfile_fde3_f-d0caaec2073c8191a4fddc5e5ca73b37_1280aa5fdfc08191a61f6d178e18c0a8"
+    },
+    {
+      "file": "Kippy_Jake_BrightBlue_ExactRing_2048(1).png",
+      "sha256": "3449b3526e925aad3847f4662dca2c9f73d6bef5b12bb86ffe1366e9dc33bdb7",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "library_file_id": "libfile_fde3_f-de7a1ea45168819180a14e6c5952c881_1280aa5fdfc08191a61f6d178e18c0a8"
+    },
+    {
+      "file": "Kippy_Jake_FullBodyThreeQuarter_Transparent_2048_v02_0000.png",
+      "sha256": "8e8e3d0ff7d1b1926a00bfc7213c4e1e72c7ea2880dabf4011968fac669b40d8",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "alpha_crop": [
+        677,
+        221,
+        1339,
+        1925
+      ],
+      "library_file_id": "libfile_fde3_f-a0b84d55f00c8191b7f2864d33f64f1a_1280aa5fdfc08191a61f6d178e18c0a8"
+    }
+  ],
+  "derivatives": [
+    {
+      "file": "assets/jake-social-preview.jpg",
+      "bytes": 248647,
+      "dimensions": [
+        1200,
+        1200
+      ]
+    },
+    {
+      "file": "assets/jake-ring-128.webp",
+      "bytes": 7960,
+      "dimensions": [
+        128,
+        128
+      ]
+    },
+    {
+      "file": "assets/jake-ring-256.webp",
+      "bytes": 20642,
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/jake-favicon.png",
+      "bytes": 8931,
+      "dimensions": [
+        64,
+        64
+      ]
+    },
+    {
+      "file": "assets/jake-apple-touch.png",
+      "bytes": 50361,
+      "dimensions": [
+        180,
+        180
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v03-3840.webp",
+      "bytes": 281612,
+      "dimensions": [
+        3840,
+        2160
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v03-2560.webp",
+      "bytes": 170026,
+      "dimensions": [
+        2560,
+        1440
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v03-1920.webp",
+      "bytes": 115606,
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "file": "assets/ensemble-with-john-blue-v03-1280.webp",
+      "bytes": 68290,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "file": "assets/jake-fullbody-640.webp",
+      "bytes": 37472,
+      "dimensions": [
+        249,
+        640
+      ]
+    },
+    {
+      "file": "assets/jake-fullbody-1600.webp",
+      "bytes": 115462,
+      "dimensions": [
+        622,
+        1600
+      ]
+    },
+    {
+      "file": "assets/jake-fullbody-1000.webp",
+      "bytes": 66124,
+      "dimensions": [
+        388,
+        1000
+      ]
+    }
+  ]
+}

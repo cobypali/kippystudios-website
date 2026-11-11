@@ -3,13 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#061333" />
+    <meta name="theme-color" content="#113c78" />
     <meta
       name="description"
       content="Premium animation for original stories and branded collaborations."
     />
     <title>Kippy Studios — Premium animation</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/jake-favicon.png" />
+    <link rel="apple-touch-icon" href="assets/jake-apple-touch.png" />
+    <meta property="og:site_name" content="Kippy Studios" />
+    <meta
+      property="og:image"
+      content="https://kippystudios.com/assets/jake-social-preview.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Jake the cucumber in the Kippy Studios sapphire and gold ring"
+    />
+    <meta name="twitter:card" content="summary" />
     <link rel="stylesheet" href="styles.css" />
     <script src="site.js" defer></script>
   </head>
@@ -19,9 +30,14 @@
       <a class="brand" href="index.html" aria-label="Kippy Studios home"
         ><img
           class="brand-icon"
-          src="assets/humster-128.webp"
+          src="assets/jake-ring-128.webp"
+          srcset="
+            assets/jake-ring-128.webp 128w,
+            assets/jake-ring-256.webp 256w
+          "
+          sizes="(max-width:700px) 42px, 56px"
           alt=""
-          width="102"
+          width="128"
           height="128"
         /><span class="brand-name gold-text">KIPPY STUDIOS</span></a
       >
@@ -45,45 +61,27 @@
             ><a class="text-link" href="team.html">Meet the team </a>
           </div>
         </div>
-        <div class="humster-stage">
-          <div
-            class="humster-media"
-            data-humster-turnaround
-            data-turnaround-approval="paused"
-          >
-            <img
-              class="hero-humster"
-              src="assets/humster-640.webp"
-              srcset="
-                assets/humster-320.webp  254w,
-                assets/humster-640.webp  509w,
-                assets/humster-1000.webp 795w
-              "
-              sizes="(max-width:700px) 76vw, 400px"
-              alt="Humster, Kippy Studios’ golden hamster with a human face"
-              width="795"
-              height="1000"
-              fetchpriority="high"
-            />
-            <video
-              class="hero-turnaround"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="none"
-              hidden
-              aria-label="Silent 360-degree turnaround of Humster, Kippy Studios’ golden hamster with a human face"
-            ></video>
-            <button class="humster-motion-toggle" type="button" hidden>
-              Pause animation
-            </button>
-          </div>
+        <div class="jake-stage">
+          <img
+            class="hero-jake"
+            src="assets/jake-fullbody-1000.webp"
+            srcset="
+              assets/jake-fullbody-640.webp  249w,
+              assets/jake-fullbody-1000.webp 388w,
+              assets/jake-fullbody-1600.webp 622w
+            "
+            sizes="(max-width:700px) 140px, (min-width:1600px) 218px, 194px"
+            alt="Jake the cucumber, Kippy Studios’ original character from The Fridge"
+            width="662"
+            height="1704"
+            fetchpriority="high"
+            decoding="async"
+          />
         </div>
       </section>
       <figure
         class="ensemble"
-        data-ensemble-revision="volumetric-v08-with-john-final"
+        data-ensemble-revision="blue-studio-v03-with-john-final"
       >
         <div
           class="ensemble-viewport"
@@ -92,19 +90,17 @@
           aria-label="Kippy character lineup, including John the toilet. Scroll horizontally on smaller screens to see the full cast."
         >
           <img
-            src="assets/ensemble-with-john-volumetric-v08-2560.webp"
+            src="assets/ensemble-with-john-blue-v03-2560.webp"
             srcset="
-              assets/ensemble-with-john-volumetric-v08-1280.webp 1280w,
-              assets/ensemble-with-john-volumetric-v08-1920.webp 1920w,
-              assets/ensemble-with-john-volumetric-v08-2560.webp 2560w,
-              assets/ensemble-with-john-volumetric-v08-3840.webp 3840w,
-              assets/ensemble-with-john-volumetric-v08-5760.webp 5760w,
-              assets/ensemble-with-john-volumetric-v08-7680.webp 7680w
+              assets/ensemble-with-john-blue-v03-1280.webp 1280w,
+              assets/ensemble-with-john-blue-v03-1920.webp 1920w,
+              assets/ensemble-with-john-blue-v03-2560.webp 2560w,
+              assets/ensemble-with-john-blue-v03-3840.webp 3840w
             "
             sizes="(max-width:700px) 569px, (min-width:1920px) 1920px, 100vw"
             alt="John the toilet at the center of Kippy Studios’ full ensemble of bathroom and food characters"
-            width="7680"
-            height="4320"
+            width="3840"
+            height="2160"
             loading="eager"
             decoding="async"
           />
