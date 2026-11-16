@@ -8,7 +8,7 @@ Run `python3 -m http.server 8765 --bind 127.0.0.1` from this directory, then ope
 
 Navigation contains Home, Our Work, and Team. Routes are `index.html`, `projects.html`, and `team.html`; the legacy `about.html` URL redirects to Team and includes a fallback link. Existing video, social, and profile/contact destinations are preserved.
 
-The main tagline is the final user-selected sentence: “Premium animation for original stories and branded collaborations.” The brand title uses the static, filled metallic CSS treatment selected from the user's visual reference. No gold animation, transition, pulsing, moving reflection, or brightness effect is implemented. The former pale rendered title overlays remain preserved as unused assets; the approved Humster and coin source artwork is unchanged.
+The main tagline is the final user-selected sentence: “Original animated stories and branded entertainment”. The brand title uses the static, filled metallic CSS treatment selected from the user's visual reference. No gold animation, transition, pulsing, moving reflection, or brightness effect is implemented. The former pale rendered title overlays remain preserved as unused assets; the approved Humster and coin source artwork is unchanged.
 
 ## Character image
 
